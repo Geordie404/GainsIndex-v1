@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.details)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.details)
+            @Html.Raw("<pre>"+Html.Encode(Model.details)+"</pre>")
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ww_bella)
@@ -76,6 +76,8 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.exercise_type)
         </dd>
+
+
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.is_sunday)
         </dt>

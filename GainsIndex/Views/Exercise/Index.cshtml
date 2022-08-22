@@ -18,12 +18,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.details)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.ww_bella)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ww_geo)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.target_muscle)
             </th>
@@ -45,7 +45,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.exercise_type)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.is_sunday)
             </th>
             <th>
@@ -65,7 +65,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.is_saturday)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
@@ -78,12 +78,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.details)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.ww_bella)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ww_geo)
-            </td>
+            </td> *@
             <td>
                 @Html.DisplayFor(modelItem => item.target_muscle)
             </td>
@@ -105,7 +105,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.exercise_type)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.is_sunday)
             </td>
             <td>
@@ -125,7 +125,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.is_saturday)
-            </td>
+            </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.id">Details</a> |
