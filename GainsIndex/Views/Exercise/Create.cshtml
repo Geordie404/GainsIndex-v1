@@ -12,46 +12,125 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
             <div class="form-group">
                 <label asp-for="exercise_name" class="control-label"></label>
-                <input asp-for="exercise_name" class="form-control" />
+                @Html.TextBoxFor(m => m.exercise_name)
                 <span asp-validation-for="exercise_name" class="text-danger"></span>
             </div>
+ 
+            @* Razor TextArea for details *@
             <div class="form-group">
                 <label asp-for="details" class="control-label"></label>
-                <input asp-for="details" class="form-control" />
+                @Html.TextAreaFor(m => m.details, new { cols="50", rows="10" })
                 <span asp-validation-for="details" class="text-danger"></span>
             </div>
+ 
+            @* Razor TextBox for bella workign weight *@
             <div class="form-group">
                 <label asp-for="ww_bella" class="control-label"></label>
-                <input asp-for="ww_bella" class="form-control" />
+                @Html.TextBoxFor(m => m.ww_bella)
                 <span asp-validation-for="ww_bella" class="text-danger"></span>
             </div>
+ 
+            @* Razor TextBox for geordie workign weight *@
             <div class="form-group">
                 <label asp-for="ww_geo" class="control-label"></label>
-                <input asp-for="ww_geo" class="form-control" />
+                @Html.TextBoxFor(m => m.ww_geo)
                 <span asp-validation-for="ww_geo" class="text-danger"></span>
             </div>
+ 
+            @* Razor TextBox for target muscle *@
             <div class="form-group">
                 <label asp-for="target_muscle" class="control-label"></label>
-                <input asp-for="target_muscle" class="form-control" />
+                @Html.TextBoxFor(m => m.target_muscle)
                 <span asp-validation-for="target_muscle" class="text-danger"></span>
             </div>
+ 
+            @* Razor TextBox for sets *@
             <div class="form-group">
                 <label asp-for="sets" class="control-label"></label>
-                <input asp-for="sets" class="form-control" />
+                @Html.TextBoxFor(m => m.sets)
                 <span asp-validation-for="sets" class="text-danger"></span>
             </div>
+ 
+            @* Razor TextBox for reps *@
             <div class="form-group">
                 <label asp-for="reps" class="control-label"></label>
-                <input asp-for="reps" class="form-control" />
+                @Html.TextBoxFor(m => m.reps)
                 <span asp-validation-for="reps" class="text-danger"></span>
             </div>
+ 
+            @* CheckBox for is_active *@
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="is_active" /> @Html.DisplayNameFor(model => model.is_active)
+                <input class="form-check-input" asp-for="is_active" /> @Html.DisplayNameFor(m => m.is_active)
                 </label>
             </div>
+ 
+            @* Razor SelectList for motion_group enum *@
+            <div class="form-group">
+                <label asp-for="motion_group" class="control-label"></label>
+                @Html.DropDownListFor(m => m.motion_group, new SelectList(Enum.GetValues(typeof(Motion))), "Motion Type")
+                <span asp-validation-for="motion_group" class="text-danger"></span>
+            </div>
+ 
+            @* Razor SelectList for body_focus enum *@
+            <div class="form-group">
+                <label asp-for="body_focus" class="control-label"></label>
+                @Html.DropDownListFor(m => m.body_focus, new SelectList(Enum.GetValues(typeof(Focus))), "Body Focus")
+                <span asp-validation-for="body_focus" class="text-danger"></span>
+            </div>
+ 
+            @* Razor SelectList for exercise_type enum *@
+            <div class="form-group">
+                <label asp-for="exercise_type" class="control-label"></label>
+                @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))), "Complexity Type")
+                <span asp-validation-for="exercise_type" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_sunday" /> @Html.DisplayNameFor(m => m.is_sunday)
+                </label>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_monday" /> @Html.DisplayNameFor(m => m.is_monday)
+                </label>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_tuesday" /> @Html.DisplayNameFor(m => m.is_tuesday)
+                </label>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_wednesday" /> @Html.DisplayNameFor(m => m.is_wednesday)
+                </label>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_thursday" /> @Html.DisplayNameFor(m => m.is_thursday)
+                </label>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_friday" /> @Html.DisplayNameFor(m => m.is_friday)
+                </label>
+            </div>
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="is_saturday" /> @Html.DisplayNameFor(m => m.is_saturday)
+                </label>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

@@ -10,40 +10,40 @@ public class Exercise
     public int reps { get; set; } // rep count number
     public bool is_active { get; set; } // is it currently live in the routine
 
-    // public Motion? motion_group { get; set; } // push pull or legs categorization
-    // public Focus? body_focus { get; set; } // area of body
-    // public Complexity? exercise_type { get; set; } // exercise complexity
-    // public Day? week_day { get; set; }
+    // Enum Fields
+    public Motion? motion_group { get; set; } // push pull or legs categorization
+    public Focus? body_focus { get; set; } // area of body
+    public Complexity? exercise_type { get; set; } // exercise complexity
+    
+    // Bool for days
+    public bool is_sunday { get; set; }
+    public bool is_monday{ get; set; }
+    public bool is_tuesday { get; set; }
+    public bool is_wednesday { get; set; }
+    public bool is_thursday { get; set; }
+    public bool is_friday { get; set; }
+    public bool is_saturday { get; set; }
+
 }
 
-// public enum Motion {
-//     Push,
-//     Pull,
-//     Legs
-// }
+public enum Motion {
+    Push,
+    Pull,
+    Legs
+}
 
-// public enum Focus {
-//     Arms,
-//     Chest,
-//     Shoulders,
-//     Back,
-//     Abdominals,
-//     Glutes,
-//     Legs 
-// }
+public enum Focus {
+    Arms,
+    Chest,
+    Shoulders,
+    Back,
+    Abdominals,
+    Glutes,
+    Legs 
+}
 
-// public enum Complexity {
-//     Compound,
-//     Isolation,
-//     Cardio
-// }
-
-// public enum Day {
-//     Monday,
-//     Tuesday,
-//     Wednesday,
-//     Thursday,
-//     Friday,
-//     Saturday,
-//     Sunday
-// }
+public enum Complexity {
+    Compound,
+    Isolation,
+    Cardio
+}
