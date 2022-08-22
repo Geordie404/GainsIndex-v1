@@ -1,8 +1,16 @@
+using Auth0.AspNetCore.Authentication; // Auth0
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Auth0
+builder.Services
+    .AddAuth0WebAppAuthentication(options => {
+      options.Domain = builder.Configuration["Auth0:Domain"];
+      options.ClientId = builder.Configuration["Auth0:ClientId"];
+    });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddDbContext<Context>();
 
 var app = builder.Build();
@@ -20,6 +28,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // Auth0
 app.UseAuthorization();
 
 app.MapControllerRoute(

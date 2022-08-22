@@ -3,6 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+     @if (User.Identity.IsAuthenticated)
+    {
+        <a class="nav-link text-dark" asp-area="" asp-controller="Exercise" asp-action="Index"><h1>Welcome to GainsIndex-v1</h1></a>
+    } else {
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark display-6" asp-area="" 
+             asp-controller="Account" 
+             asp-action="Login">Login</a>
+        </li>
+      </ul>
+      }
+
+</div

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization; // 👈 new code
 using Microsoft.EntityFrameworkCore;
 
 namespace GainsIndex.Controllers
@@ -18,6 +19,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise
+        [Authorize] // 👈 new code
         public async Task<IActionResult> Index()
         {
               return _context.Exercises != null ? 
@@ -26,6 +28,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Details/5
+        [Authorize] // 👈 new code
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -44,6 +47,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Create
+        [Authorize] // 👈 new code
         public IActionResult Create()
         {
             return View();
@@ -66,6 +70,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Edit/5
+        [Authorize] // 👈 new code
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -117,6 +122,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Delete/5
+        [Authorize] // 👈 new code
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Exercises == null)

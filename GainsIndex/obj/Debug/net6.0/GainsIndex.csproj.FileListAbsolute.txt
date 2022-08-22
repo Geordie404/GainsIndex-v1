@@ -280,3 +280,5 @@
 /Users/geordie/Desktop/Code/Geordie404/Gains-Index/GainsIndex/obj/Debug/net6.0/GainsIndex.pdb
 /Users/geordie/Desktop/Code/Geordie404/Gains-Index/GainsIndex/obj/Debug/net6.0/GainsIndex.genruntimeconfig.cache
 /Users/geordie/Desktop/Code/Geordie404/Gains-Index/GainsIndex/obj/Debug/net6.0/ref/GainsIndex.dll
+/Users/geordie/Desktop/Code/Geordie404/Gains-Index/GainsIndex/bin/Debug/net6.0/Auth0.AspNetCore.Authentication.dll
+/Users/geordie/Desktop/Code/Geordie404/Gains-Index/GainsIndex/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
