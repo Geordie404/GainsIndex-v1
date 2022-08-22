@@ -28,7 +28,6 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Details/5
-        [Authorize] // 👈 new code
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -47,7 +46,6 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Create
-        [Authorize] // 👈 new code
         public IActionResult Create()
         {
             return View();
@@ -58,7 +56,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,exercise,details,ww_bella,ww_geo,target_muscle,sets,reps,is_active,motion_group,body_focus,exercise_type,week_day")] Exercise exercise)
+        public async Task<IActionResult> Create([Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,is_active")] Exercise exercise)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +68,6 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Edit/5
-        [Authorize] // 👈 new code
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -91,7 +88,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,exercise,details,ww_bella,ww_geo,target_muscle,sets,reps,is_active,motion_group,body_focus,exercise_type,week_day")] Exercise exercise)
+        public async Task<IActionResult> Edit(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,is_active")] Exercise exercise)
         {
             if (id != exercise.id)
             {
@@ -122,7 +119,6 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Delete/5
-        [Authorize] // 👈 new code
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Exercises == null)

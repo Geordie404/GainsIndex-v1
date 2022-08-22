@@ -13,9 +13,9 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="exercise" class="control-label"></label>
-                <input asp-for="exercise" class="form-control" />
-                <span asp-validation-for="exercise" class="text-danger"></span>
+                <label asp-for="exercise_name" class="control-label"></label>
+                <input asp-for="exercise_name" class="form-control" />
+                <span asp-validation-for="exercise_name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="details" class="control-label"></label>
@@ -51,26 +51,6 @@
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="is_active" /> @Html.DisplayNameFor(model => model.is_active)
                 </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="motion_group" class="control-label"></label>
-                <select asp-for="motion_group" class="form-control"></select>
-                <span asp-validation-for="motion_group" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="body_focus" class="control-label"></label>
-                <select asp-for="body_focus" class="form-control"></select>
-                <span asp-validation-for="body_focus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="exercise_type" class="control-label"></label>
-                <select asp-for="exercise_type" class="form-control"></select>
-                <span asp-validation-for="exercise_type" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="week_day" class="control-label"></label>
-                <select asp-for="week_day" class="form-control"></select>
-                <span asp-validation-for="week_day" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
