@@ -1,3 +1,2 @@
-# Ignore the build directory
-/GainsIndex/bin
-/GainsIndex/obj
+GainsIndex/bin/**
+GainsIndex/obj/Debug/**
