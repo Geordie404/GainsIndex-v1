@@ -6,7 +6,7 @@ public class Context : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
         // connect to sqlite database
-        options.UseSqlite(@"Data Source=test.db");
+        options.UseSqlite(@"Data Source=exercise.db");
     }
    
    public DbSet<Exercise> Exercises {get;set;}
