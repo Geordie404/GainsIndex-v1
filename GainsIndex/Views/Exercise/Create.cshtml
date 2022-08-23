@@ -88,6 +88,11 @@
             @* BOOLS for days *@
             <div class="form-group form-check">
                 <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_sunday" /> @Html.DisplayNameFor(model => model.bella_sunday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
                     <input class="form-check-input" asp-for="bella_monday" /> @Html.DisplayNameFor(model => model.bella_monday)
                 </label>
             </div>
@@ -113,10 +118,14 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_weekend" /> @Html.DisplayNameFor(model => model.bella_weekend)
+                    <input class="form-check-input" asp-for="bella_saturday" /> @Html.DisplayNameFor(model => model.bella_saturday)
                 </label>
             </div>
-
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_sunday" /> @Html.DisplayNameFor(model => model.geo_sunday)
+                </label>
+            </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="geo_monday" /> @Html.DisplayNameFor(model => model.geo_monday)
@@ -144,7 +153,7 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_weekend" /> @Html.DisplayNameFor(model => model.geo_weekend)
+                    <input class="form-check-input" asp-for="geo_saturday" /> @Html.DisplayNameFor(model => model.geo_saturday)
                 </label>
             </div>
 
