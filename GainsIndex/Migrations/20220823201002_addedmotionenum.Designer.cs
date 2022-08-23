@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GainsIndex.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20220823201002_addedmotionenum")]
+    partial class addedmotionenum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.8");
@@ -28,6 +30,12 @@ namespace GainsIndex.Migrations
                     b.Property<bool>("bella_monday")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("bella_saturday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("bella_sunday")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("bella_thursday")
                         .HasColumnType("INTEGER");
 
@@ -35,9 +43,6 @@ namespace GainsIndex.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("bella_wednesday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("bella_weekend")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("body_focus")
@@ -60,6 +65,12 @@ namespace GainsIndex.Migrations
                     b.Property<bool>("geo_monday")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("geo_saturday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("geo_sunday")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("geo_thursday")
                         .HasColumnType("INTEGER");
 
@@ -67,9 +78,6 @@ namespace GainsIndex.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("geo_wednesday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("geo_weekend")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("log_bella")
