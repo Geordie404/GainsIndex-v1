@@ -22,6 +22,10 @@ h1.bark {
   padding: 20px;
 }
 
+.github {
+    color: rgb(74, 87, 207);
+  }
+
 /* @media only screen and (max-width: 600px) {
     body {
       color: hotpink;
