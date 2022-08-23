@@ -28,6 +28,12 @@ namespace GainsIndex.Migrations
                     b.Property<bool>("bella_monday")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("bella_saturday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("bella_sunday")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("bella_thursday")
                         .HasColumnType("INTEGER");
 
@@ -35,9 +41,6 @@ namespace GainsIndex.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("bella_wednesday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("bella_weekend")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("body_focus")
@@ -60,6 +63,12 @@ namespace GainsIndex.Migrations
                     b.Property<bool>("geo_monday")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("geo_saturday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("geo_sunday")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("geo_thursday")
                         .HasColumnType("INTEGER");
 
@@ -67,9 +76,6 @@ namespace GainsIndex.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("geo_wednesday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("geo_weekend")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("log_bella")
