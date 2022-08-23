@@ -58,7 +58,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_sunday,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_saturday,geo_sunday,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_saturday")] Exercise exercise)
+        public async Task<IActionResult> Create([Bind("id,exercise_name,details,ww_bella,ww_geo,log_bella,log_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_sunday,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_saturday,geo_sunday,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_saturday")] Exercise exercise)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_sunday,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_saturday,geo_sunday,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_saturday")] Exercise exercise)
+        public async Task<IActionResult> Edit(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,log_bella,log_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_sunday,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_saturday,geo_sunday,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_saturday")] Exercise exercise)
         {
             if (id != exercise.id)
             {

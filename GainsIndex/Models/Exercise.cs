@@ -3,11 +3,13 @@ public class Exercise
     public int id { get; set; }
     public string exercise_name { get; set; } // name of exercise ex. Flat Bench Press
     public string details { get; set; } // small description, tips, etc
-    public string? ww_bella { get; set; } // working weight for bella
-    public string? ww_geo { get; set; } // working weight for geo
+    public int? ww_bella { get; set; } // working weight for bella
+    public int? ww_geo { get; set; } // working weight for geo
+    public string? log_bella { get; set; } // working weight log for bella
+    public string? log_geo { get; set; } // working weight log for geo
     public string target_muscle { get; set; } // target muscle
-    public int sets { get; set; } // set count number
-    public int reps { get; set; } // rep count number
+    public string sets { get; set; } // set count number
+    public string reps { get; set; } // rep count number
 
     // Enum Fields
     public Motion? motion_group { get; set; } // push pull or legs categorization

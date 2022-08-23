@@ -35,12 +35,26 @@
                 @Html.TextBoxFor(m => m.ww_bella)
                 <span asp-validation-for="ww_bella" class="text-danger"></span>
             </div>
+
+            @* Razor TextBox for bella log *@
+            <div class="form-group">
+                <label asp-for="log_bella" class="control-label"></label>
+                @Html.TextBoxFor(m => m.log_bella)
+                <span asp-validation-for="log_bella" class="text-danger"></span>
+            </div>
  
             @* Razor TextBox for geordie workign weight *@
             <div class="form-group">
                 <label asp-for="ww_geo" class="control-label"></label>
                 @Html.TextBoxFor(m => m.ww_geo)
                 <span asp-validation-for="ww_geo" class="text-danger"></span>
+            </div>
+
+             @* Razor TextBox for geo log *@
+            <div class="form-group">
+                <label asp-for="log_geo" class="control-label"></label>
+                @Html.TextBoxFor(m => m.log_geo)
+                <span asp-validation-for="log_geo" class="text-danger"></span>
             </div>
  
             @* Razor TextBox for target muscle *@
