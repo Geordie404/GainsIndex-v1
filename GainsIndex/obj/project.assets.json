@@ -9898,26 +9898,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\15025\\.nuget\\packages\\": {}
+    "/Users/geordie/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\15025\\Documents\\Coding\\Gains!\\GainsIndex-v1\\GainsIndex\\GainsIndex.csproj",
+      "projectUniqueName": "/Users/geordie/Desktop/Code/Geordie404/GainsIndex-v1/GainsIndex/GainsIndex.csproj",
       "projectName": "GainsIndex",
-      "projectPath": "C:\\Users\\15025\\Documents\\Coding\\Gains!\\GainsIndex-v1\\GainsIndex\\GainsIndex.csproj",
-      "packagesPath": "C:\\Users\\15025\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\15025\\Documents\\Coding\\Gains!\\GainsIndex-v1\\GainsIndex\\obj\\",
+      "projectPath": "/Users/geordie/Desktop/Code/Geordie404/GainsIndex-v1/GainsIndex/GainsIndex.csproj",
+      "packagesPath": "/Users/geordie/.nuget/packages/",
+      "outputPath": "/Users/geordie/Desktop/Code/Geordie404/GainsIndex-v1/GainsIndex/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\15025\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/geordie/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -9981,7 +9979,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }
