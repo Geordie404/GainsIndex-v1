@@ -1,0 +1,21 @@
+@model IEnumerable<Exercise>
+
+@* WORK OUT INDEX - HOME PAGE *@
+
+@{
+    ViewData["Title"] = "GAINS INDEX";
+}
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/home.css" />
+</head>
+
+<h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
+<h1 class="bark"> version 1 </h1>
+
+@foreach (var item in Model) {
+    <div class="cbox">
+        <p class="woi">@Html.DisplayNameFor(model => model.exercise_name)</p>
+        <p class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</p>
+    </div>
+}

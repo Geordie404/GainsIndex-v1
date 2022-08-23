@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+h1.woi {
+  color: darkgoldenrod;
+}
+
+h1.bark {
+  color: darkblue;
+}
+
+.cbox {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: #858585 solid 3px;
+  border-radius: 2.5px;
+  background-color: pink;
+  display: flex;
+  max-width: fit-content;
+}
+
+.p.cbox {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      color: hotpink;
+      font-family: 'Courier New', Courier, monospace;
+    }
+  } */
