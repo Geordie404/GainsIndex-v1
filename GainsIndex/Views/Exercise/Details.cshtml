@@ -20,7 +20,7 @@
             @Html.DisplayNameFor(model => model.details)
         </dt>
         <dd class = "col-sm-10">
-            @Html.Raw("<pre>"+Html.Encode(Model.details)+"</pre>")
+            @Html.DisplayFor(model => model.details)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ww_bella)
@@ -53,12 +53,6 @@
             @Html.DisplayFor(model => model.reps)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_active)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_active)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.motion_group)
         </dt>
         <dd class = "col-sm-10">
@@ -76,49 +70,89 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.exercise_type)
         </dd>
-
-
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_sunday)
+            @Html.DisplayNameFor(model => model.bella_sunday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_sunday)
+            @Html.DisplayFor(model => model.bella_sunday)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_monday)
+            @Html.DisplayNameFor(model => model.bella_monday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_monday)
+            @Html.DisplayFor(model => model.bella_monday)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_tuesday)
+            @Html.DisplayNameFor(model => model.bella_tuesday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_tuesday)
+            @Html.DisplayFor(model => model.bella_tuesday)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_wednesday)
+            @Html.DisplayNameFor(model => model.bella_wednesday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_wednesday)
+            @Html.DisplayFor(model => model.bella_wednesday)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_thursday)
+            @Html.DisplayNameFor(model => model.bella_thursday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_thursday)
+            @Html.DisplayFor(model => model.bella_thursday)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_friday)
+            @Html.DisplayNameFor(model => model.bella_friday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_friday)
+            @Html.DisplayFor(model => model.bella_friday)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_saturday)
+            @Html.DisplayNameFor(model => model.bella_saturday)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_saturday)
+            @Html.DisplayFor(model => model.bella_saturday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_sunday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_sunday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_monday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_monday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_tuesday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_tuesday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_wednesday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_wednesday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_thursday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_thursday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_friday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_friday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.geo_saturday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.geo_saturday)
         </dd>
     </dl>
 </div>

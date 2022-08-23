@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Authorization; // 👈 new code
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 namespace GainsIndex.Controllers
@@ -19,7 +19,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise
-        [Authorize] // 👈 new code
+        [Authorize]
         public async Task<IActionResult> Index()
         {
               return _context.Exercises != null ? 
@@ -28,7 +28,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Details/5
-        [Authorize] // 👈 new code
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -47,7 +47,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Create
-        [Authorize] // 👈 new code
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -58,7 +58,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,is_active,motion_group,body_focus,exercise_type,is_sunday,is_monday,is_tuesday,is_wednesday,is_thursday,is_friday,is_saturday")] Exercise exercise)
+        public async Task<IActionResult> Create([Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_sunday,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_saturday,geo_sunday,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_saturday")] Exercise exercise)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +70,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Edit/5
-        [Authorize] // 👈 new code
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -91,7 +91,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,is_active,motion_group,body_focus,exercise_type,is_sunday,is_monday,is_tuesday,is_wednesday,is_thursday,is_friday,is_saturday")] Exercise exercise)
+        public async Task<IActionResult> Edit(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_sunday,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_saturday,geo_sunday,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_saturday")] Exercise exercise)
         {
             if (id != exercise.id)
             {
@@ -122,7 +122,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Delete/5
-        [Authorize] // 👈 new code
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Exercises == null)

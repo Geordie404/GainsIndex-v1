@@ -12,7 +12,8 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
+
+            @* Razor for exercise name *@
             <div class="form-group">
                 <label asp-for="exercise_name" class="control-label"></label>
                 @Html.TextBoxFor(m => m.exercise_name)
@@ -61,12 +62,6 @@
                 <span asp-validation-for="reps" class="text-danger"></span>
             </div>
  
-            @* CheckBox for is_active *@
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_active" /> @Html.DisplayNameFor(m => m.is_active)
-                </label>
-            </div>
  
             @* Razor SelectList for motion_group enum *@
             <div class="form-group">
@@ -88,46 +83,77 @@
                 @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))), "Complexity Type")
                 <span asp-validation-for="exercise_type" class="text-danger"></span>
             </div>
+           
 
+            @* BOOLS for days *@
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_sunday" /> @Html.DisplayNameFor(m => m.is_sunday)
+                    <input class="form-check-input" asp-for="bella_sunday" /> @Html.DisplayNameFor(model => model.bella_sunday)
                 </label>
             </div>
-
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_monday" /> @Html.DisplayNameFor(m => m.is_monday)
+                    <input class="form-check-input" asp-for="bella_monday" /> @Html.DisplayNameFor(model => model.bella_monday)
                 </label>
             </div>
-
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_tuesday" /> @Html.DisplayNameFor(m => m.is_tuesday)
+                    <input class="form-check-input" asp-for="bella_tuesday" /> @Html.DisplayNameFor(model => model.bella_tuesday)
                 </label>
             </div>
-
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_wednesday" /> @Html.DisplayNameFor(m => m.is_wednesday)
+                    <input class="form-check-input" asp-for="bella_wednesday" /> @Html.DisplayNameFor(model => model.bella_wednesday)
                 </label>
             </div>
-
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_thursday" /> @Html.DisplayNameFor(m => m.is_thursday)
+                    <input class="form-check-input" asp-for="bella_thursday" /> @Html.DisplayNameFor(model => model.bella_thursday)
                 </label>
             </div>
-
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_friday" /> @Html.DisplayNameFor(m => m.is_friday)
+                    <input class="form-check-input" asp-for="bella_friday" /> @Html.DisplayNameFor(model => model.bella_friday)
                 </label>
             </div>
-
             <div class="form-group form-check">
                 <label class="form-check-label">
-                <input class="form-check-input" asp-for="is_saturday" /> @Html.DisplayNameFor(m => m.is_saturday)
+                    <input class="form-check-input" asp-for="bella_saturday" /> @Html.DisplayNameFor(model => model.bella_saturday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_sunday" /> @Html.DisplayNameFor(model => model.geo_sunday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_monday" /> @Html.DisplayNameFor(model => model.geo_monday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_tuesday" /> @Html.DisplayNameFor(model => model.geo_tuesday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_wednesday" /> @Html.DisplayNameFor(model => model.geo_wednesday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_thursday" /> @Html.DisplayNameFor(model => model.geo_thursday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_friday" /> @Html.DisplayNameFor(model => model.geo_friday)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_saturday" /> @Html.DisplayNameFor(model => model.geo_saturday)
                 </label>
             </div>
 

@@ -15,10 +15,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.exercise_name)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.details)
             </th>
-            @* <th>
+            <th>
                 @Html.DisplayNameFor(model => model.ww_bella)
             </th>
             <th>
@@ -34,9 +34,6 @@
                 @Html.DisplayNameFor(model => model.reps)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_active)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.motion_group)
             </th>
             <th>
@@ -46,25 +43,46 @@
                 @Html.DisplayNameFor(model => model.exercise_type)
             </th>
             @* <th>
-                @Html.DisplayNameFor(model => model.is_sunday)
+                @Html.DisplayNameFor(model => model.bella_sunday)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_monday)
+                @Html.DisplayNameFor(model => model.bella_monday)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_tuesday)
+                @Html.DisplayNameFor(model => model.bella_tuesday)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_wednesday)
+                @Html.DisplayNameFor(model => model.bella_wednesday)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_thursday)
+                @Html.DisplayNameFor(model => model.bella_thursday)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_friday)
+                @Html.DisplayNameFor(model => model.bella_friday)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.is_saturday)
+                @Html.DisplayNameFor(model => model.bella_saturday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_sunday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_monday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_tuesday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_wednesday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_thursday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_friday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.geo_saturday)
             </th> *@
             <th></th>
         </tr>
@@ -75,10 +93,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.exercise_name)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.details)
             </td>
-            @* <td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ww_bella)
             </td>
             <td>
@@ -94,9 +112,6 @@
                 @Html.DisplayFor(modelItem => item.reps)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_active)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.motion_group)
             </td>
             <td>
@@ -106,25 +121,46 @@
                 @Html.DisplayFor(modelItem => item.exercise_type)
             </td>
             @* <td>
-                @Html.DisplayFor(modelItem => item.is_sunday)
+                @Html.DisplayFor(modelItem => item.bella_sunday)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_monday)
+                @Html.DisplayFor(modelItem => item.bella_monday)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_tuesday)
+                @Html.DisplayFor(modelItem => item.bella_tuesday)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_wednesday)
+                @Html.DisplayFor(modelItem => item.bella_wednesday)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_thursday)
+                @Html.DisplayFor(modelItem => item.bella_thursday)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_friday)
+                @Html.DisplayFor(modelItem => item.bella_friday)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.is_saturday)
+                @Html.DisplayFor(modelItem => item.bella_saturday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_sunday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_monday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_tuesday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_wednesday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_thursday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_friday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.geo_saturday)
             </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |

@@ -8,22 +8,29 @@ public class Exercise
     public string target_muscle { get; set; } // target muscle
     public int sets { get; set; } // set count number
     public int reps { get; set; } // rep count number
-    public bool is_active { get; set; } // is it currently live in the routine
 
     // Enum Fields
     public Motion? motion_group { get; set; } // push pull or legs categorization
     public Focus? body_focus { get; set; } // area of body
     public Complexity? exercise_type { get; set; } // exercise complexity
     
-    // Bool for days
-    public bool is_sunday { get; set; }
-    public bool is_monday{ get; set; }
-    public bool is_tuesday { get; set; }
-    public bool is_wednesday { get; set; }
-    public bool is_thursday { get; set; }
-    public bool is_friday { get; set; }
-    public bool is_saturday { get; set; }
+    // Bool for bella days
+    public bool bella_sunday { get; set; }
+    public bool bella_monday{ get; set; }
+    public bool bella_tuesday { get; set; }
+    public bool bella_wednesday { get; set; }
+    public bool bella_thursday { get; set; }
+    public bool bella_friday { get; set; }
+    public bool bella_saturday { get; set; }
 
+    // Bool for geordie days
+    public bool geo_sunday { get; set; }
+    public bool geo_monday{ get; set; }
+    public bool geo_tuesday { get; set; }
+    public bool geo_wednesday { get; set; }
+    public bool geo_thursday { get; set; }
+    public bool geo_friday { get; set; }
+    public bool geo_saturday { get; set; }
 }
 
 public enum Motion {
