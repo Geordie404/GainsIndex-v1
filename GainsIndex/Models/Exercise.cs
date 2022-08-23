@@ -17,28 +17,27 @@ public class Exercise
     public Complexity? exercise_type { get; set; } // exercise complexity
     
     // Bool for bella days
-    public bool bella_sunday { get; set; }
     public bool bella_monday{ get; set; }
     public bool bella_tuesday { get; set; }
     public bool bella_wednesday { get; set; }
     public bool bella_thursday { get; set; }
     public bool bella_friday { get; set; }
-    public bool bella_saturday { get; set; }
+    public bool bella_weekend{ get; set; }
 
     // Bool for geordie days
-    public bool geo_sunday { get; set; }
     public bool geo_monday{ get; set; }
     public bool geo_tuesday { get; set; }
     public bool geo_wednesday { get; set; }
     public bool geo_thursday { get; set; }
     public bool geo_friday { get; set; }
-    public bool geo_saturday { get; set; }
+    public bool geo_weekend{ get; set; }
 }
 
 public enum Motion {
     Push,
     Pull,
-    Legs
+    Hinge, 
+    Bend
 }
 
 public enum Focus {
