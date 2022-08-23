@@ -16,3 +16,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+} */
