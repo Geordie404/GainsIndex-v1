@@ -11,7 +11,6 @@ GainsIndex-v1
                     - Each exercise can be clicked to grey out / signify it is complete w/javascript
                     - Each exercise has link to simple edit to update working weight / log notes
 
-
 - CSS Conventions for specific pages
     - .woi -> workout index
     - .dtl -> workout details 
@@ -21,6 +20,13 @@ GainsIndex-v1
 
 ### UPDATES 
 - AUG 23 2022
-    - added custom css file for 1_WorkOutIndex
+    - added custom css file for Exercise Home 
     - created css conventions for specific pages
     - created design plan
+    - added exercise cards
+    - formatted header
+    - updated DB to have actual exercises
+    - added gitignore for bin & obj
+
+- Where to start:
+    - add filter to Exercise Home for days 
