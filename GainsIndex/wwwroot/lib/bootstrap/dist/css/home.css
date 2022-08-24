@@ -1,11 +1,60 @@
 @charset "UTF-8";
 
-h1.woi {
-  color: darkgoldenrod;
+body {
+    background-color: lavender;
 }
 
-h1.bark {
+*, ::before, ::after {
+    box-sizing: none;
+}
+
+.container {
+    max-width: 1275px;
+}
+
+header {
+    display: flex;
+    flex-flow: column wrap; 
+    align-content: flex-start;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+}
+
+.gi {
+    display: flex;
+    align-items: baseline;
+}
+
+h1.woi {
+  color: darkgoldenrod;
+  font-size: 5rem;
+}
+
+.bark {
   color: darkblue;
+  text-align: center;
+  font-family: "DotGothic16";
+  font-size: 1.3rem;
+  line-height: 0px;
+}
+
+
+.github {
+    color: rgb(74, 87, 207);
+    line-height: 1em;
+    text-shadow: 1px 1px 10px grey;
+    padding-left: 6em;
+}
+
+.desc {
+    margin-left: 6em;
+    margin-bottom: 0px;
+}
+
+
+.woibox {
+    display: flex;
+    flex-flow: column wrap; 
+    align-content: center;
 }
 
 .cbox {
@@ -14,7 +63,11 @@ h1.bark {
   border-radius: 2.5px;
   background-color: pink;
   display: flex;
-  max-width: fit-content;
+  flex-flow: column wrap; 
+  justify-content: center;
+  width: 25em; 
+  margin: 1.25em;
+  padding: .75em;
 }
 
 .p.cbox {
@@ -22,9 +75,7 @@ h1.bark {
   padding: 20px;
 }
 
-.github {
-    color: rgb(74, 87, 207);
-  }
+
 
 /* @media only screen and (max-width: 600px) {
     body {

@@ -11,14 +11,22 @@
 </head>
 
 <header>
-<h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
-<h1 class="bark"> version 1 </h1>
-<a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
+    <div class="gi">
+        <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
+        <h1 class="bark">version 1</h1>
+    </div>
+    <p class="desc">track your workout routines</p>
+    <a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
 </header>
 
+<div class="woibox">
 @foreach (var item in Model) {
     <div class="cbox">
-        <p class="woi">@Html.DisplayNameFor(model => model.exercise_name)</p>
-        <p class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</p>
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+            
     </div>
 }
+</div>
