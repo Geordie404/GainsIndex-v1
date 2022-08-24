@@ -38,11 +38,21 @@ namespace GainsIndex.Controllers
 
         // Catalog - Comprehensive Exercise Database View
         [Authorize]
-        public async Task<IActionResult> Catalog()
+        public async Task<IActionResult> Catalog(string name_filter)
         {
-              return _context.Exercises != null ? 
-                          View(await _context.Exercises.ToListAsync()) :
-                          Problem("Entity set 'Context.Exercises'  is null.");
+            // ViewData["CurrentFilter"] = filter;
+
+            var exercises = from e in _context.Exercises
+                   select e;
+
+
+            if (!String.IsNullOrEmpty(name_filter))
+            {
+                exercises = exercises.Where(e => e.exercise_name.Contains(name_filter));
+            }
+
+            return View(await exercises.AsNoTracking().ToListAsync());
+
         }
 
         // GET: Exercise/Details/5

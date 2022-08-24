@@ -8,6 +8,19 @@
 <img src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png">
 
 
+@* Search Bar for Exercise Name *@
+
+<form asp-action="Catalog" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Exercise Name: <input type="text" name="name_filter" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Catalog">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
+
 @foreach (var item in Model) {
     <div class="cbox">
         <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
