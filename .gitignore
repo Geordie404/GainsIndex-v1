@@ -3,3 +3,4 @@
 /GainsIndex/bin/**
 /GainsIndex/obj/Debug/**
 /GainsIndex/obj/**
+.DS_Store
