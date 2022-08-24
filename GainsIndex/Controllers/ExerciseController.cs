@@ -36,6 +36,15 @@ namespace GainsIndex.Controllers
                           Problem("Entity set 'Context.Exercises'  is null.");
         }
 
+        // Catalog - Comprehensive Exercise Database View
+        [Authorize]
+        public async Task<IActionResult> Catalog()
+        {
+              return _context.Exercises != null ? 
+                          View(await _context.Exercises.ToListAsync()) :
+                          Problem("Entity set 'Context.Exercises'  is null.");
+        }
+
         // GET: Exercise/Details/5
         [Authorize]
         public async Task<IActionResult> Details(int? id)

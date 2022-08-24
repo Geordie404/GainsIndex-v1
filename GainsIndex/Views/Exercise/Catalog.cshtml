@@ -1,0 +1,18 @@
+@model IEnumerable<Exercise>
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/home.css" />
+</head>
+
+<h1><i>Catalogue</i></h1>
+<img src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png">
+
+
+@foreach (var item in Model) {
+    <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+    </div>
+}

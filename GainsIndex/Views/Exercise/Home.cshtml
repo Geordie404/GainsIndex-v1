@@ -17,15 +17,20 @@
     </div>
     <p class="desc">track your workout routines</p>
     <a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
+    <a asp-controller="Exercise" asp-action="Catalog"><i>catalog</i></a>
 </header>
 
 <div class="woibox">
+
+@* @if (var  *@
+
 @foreach (var item in Model) {
     <div class="cbox">
         <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+
             
     </div>
 }
