@@ -102,7 +102,7 @@ namespace GainsIndex.Controllers
             // name filter
             if (!String.IsNullOrEmpty(name_filter))
             {
-                exercises = exercises.Where(e => e.exercise_name.Contains(name_filter));
+                exercises = exercises.Where(e => e.exercise_name.ToUpper().Contains(name_filter.ToUpper()));
             }
 
             // motion filter
