@@ -17,12 +17,12 @@ public class Exercise
     public Complexity? exercise_type { get; set; } // exercise complexity
     
     // Bool for bella days
-    public bool bella_monday{ get; set; }
+    public bool bella_monday { get; set; }
     public bool bella_tuesday { get; set; }
     public bool bella_wednesday { get; set; }
     public bool bella_thursday { get; set; }
     public bool bella_friday { get; set; }
-    public bool bella_weekend{ get; set; }
+    public bool bella_weekend { get; set; }
 
     // Bool for geordie days
     public bool geo_monday{ get; set; }

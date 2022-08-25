@@ -8,6 +8,36 @@
 
 <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/home.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script> @* day sort *@
+        $(document).ready(function(){
+            $("select").change(function(){
+                $(this).find("option:selected").each(function(){
+                    var optionValue = $(this).attr("value");
+                    if(optionValue){
+                        $(".day").not("." + optionValue).hide();
+                        $("." + optionValue).show();
+                    } else{
+                        $(".day").hide();
+                    }
+                });
+            }).change();
+        });
+    </script>
+    
+    <script> @* toggle *@
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $(".bella").hide();
+            });
+            $("#show").click(function(){
+                $(".geo").show();
+            });
+        });
+    </script>
+
 </head>
 
 <header>
@@ -17,21 +47,89 @@
     </div>
     <p class="desc">track your workout routines</p>
     <a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
-    <a asp-controller="Exercise" asp-action="Catalog"><i>catalog</i></a>
+    <a class="github" asp-controller="Exercise" asp-action="Catalog"><i>catalog</i></a>
+    <a class="github" asp-controller="Exercise" asp-action="Index"><i>INDEX :-B</i></a>
 </header>
 
 <div class="woibox">
+    @* select day *@
+    <div> 
+        <select>
+            <option>Choose Day</option>
+            <option value="monday">Monday</option>
+          	<option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+        </select>
+    </div>
+    <div>
+        <h1>B/G</h1>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
 
-@* @if (var  *@
-
-@foreach (var item in Model) {
+@* @foreach (var item in Model) {
     <div class="cbox">
         <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
-
-            
     </div>
+} *@
+
+<div class="monday day">
+@foreach (var item in Model) {
+    @if (item.bella_monday)
+    {
+        <div class="bella cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_monday) monday</p>
+        </div>
+    }
+     @if (item.geo_monday)
+    {
+        <div class="geo cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.geo_monday) g monday</p>
+        </div>
+    }
 }
 </div>
+
+<div class="bella tuesday day">
+@foreach (var item in Model) {
+    @if (item.bella_tuesday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_tuesday) tuesday</p>
+        </div>
+    }
+}
+</div>
+
+<div class="bella wednesday day">
+@foreach (var item in Model) {
+    @if (item.bella_wednesday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_wednesday) wednesday</p>
+        </div>
+    }
+}
+</div>
+
