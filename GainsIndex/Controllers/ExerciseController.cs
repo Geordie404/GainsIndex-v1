@@ -92,17 +92,29 @@ namespace GainsIndex.Controllers
 
         // Catalog - Comprehensive Exercise Database View
         [Authorize]
-        public async Task<IActionResult> Catalog(string name_filter)
+        public async Task<IActionResult> Catalog(string name_filter ,string motion_filter, string focus_filter)
         {
             // ViewData["CurrentFilter"] = filter;
 
             var exercises = from e in _context.Exercises
                    select e;
 
-
+            // name filter
             if (!String.IsNullOrEmpty(name_filter))
             {
                 exercises = exercises.Where(e => e.exercise_name.Contains(name_filter));
+            }
+
+            // motion filter
+            if (!String.IsNullOrEmpty(motion_filter))
+            {
+                exercises = exercises.Where(e => e.motion_group.Contains(motion_filter));
+            }
+
+            // focus filter
+            if (!String.IsNullOrEmpty(focus_filter))
+            {
+                exercises = exercises.Where(e => e.body_focus.Contains(focus_filter));
             }
 
             return View(await exercises.AsNoTracking().ToListAsync());
