@@ -57,6 +57,10 @@ h1.woi {
     align-content: center;
 }
 
+.geotuesday {
+  background-color: black;
+}
+
 .cbox {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border: #858585 solid 3px;
@@ -69,6 +73,8 @@ h1.woi {
   margin: 1.25em;
   padding: .75em;
 }
+
+
 
 .p.cbox {
   flex-wrap: wrap;

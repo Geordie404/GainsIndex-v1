@@ -29,11 +29,15 @@
     
     <script> @* toggle *@
         $(document).ready(function(){
-            $("#hide").click(function(){
-                $(".bella").hide();
+             $(".bella").show();
+             $(".geo").hide();
+            $("#bella").click(function(){
+                $(".bella").show();
+                 $(".geo").hide();
             });
-            $("#show").click(function(){
+            $("#geo").click(function(){
                 $(".geo").show();
+                $(".bella").hide();
             });
         });
     </script>
@@ -63,10 +67,8 @@
     </div>
     <div>
         <h1>B/G</h1>
-        <label class="switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
+        <button id="bella">B :-D</button>
+        <button id="geo">G >:-$%</button>
     </div>
 
 @* @foreach (var item in Model) {
@@ -80,6 +82,7 @@
 
 <div class="monday day">
 @foreach (var item in Model) {
+    <div class="bella">
     @if (item.bella_monday)
     {
         <div class="bella cbox">
@@ -90,6 +93,8 @@
         <p>@Html.DisplayFor(modelItem => item.bella_monday) monday</p>
         </div>
     }
+    </div>
+    <div class="geo">
      @if (item.geo_monday)
     {
         <div class="geo cbox">
@@ -100,11 +105,13 @@
         <p>@Html.DisplayFor(modelItem => item.geo_monday) g monday</p>
         </div>
     }
+    </div>
 }
 </div>
 
-<div class="bella tuesday day">
+<div class="tuesday day">
 @foreach (var item in Model) {
+    <div class="bella">
     @if (item.bella_tuesday)
     {
         <div class="cbox">
@@ -115,6 +122,19 @@
         <p>@Html.DisplayFor(modelItem => item.bella_tuesday) tuesday</p>
         </div>
     }
+    </div>
+    <div class="geo">
+    @if (item.geo_tuesday)
+    {
+        <div class="geotuesday cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.geo_tuesday) g tuesday</p>
+        </div>
+    }
+    </div>
 }
 </div>
 
