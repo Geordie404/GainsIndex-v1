@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GainsIndex.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20220824002218_NewExerciseDb")]
-    partial class NewExerciseDb
+    [Migration("20220825005928_changeenums")]
+    partial class changeenums
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,8 +42,8 @@ namespace GainsIndex.Migrations
                     b.Property<bool>("bella_weekend")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("body_focus")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("body_focus")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("details")
                         .IsRequired()
@@ -53,8 +53,8 @@ namespace GainsIndex.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("exercise_type")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("exercise_type")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("geo_friday")
                         .HasColumnType("INTEGER");
@@ -80,8 +80,8 @@ namespace GainsIndex.Migrations
                     b.Property<string>("log_geo")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("motion_group")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("motion_group")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("reps")
                         .IsRequired()

@@ -12,9 +12,9 @@ public class Exercise
     public string reps { get; set; } // rep count number
 
     // Enum Fields
-    public Motion? motion_group { get; set; } // push pull or legs categorization
-    public Focus? body_focus { get; set; } // area of body
-    public Complexity? exercise_type { get; set; } // exercise complexity
+    public string? motion_group { get; set; } // push pull or legs categorization
+    public string? body_focus { get; set; } // area of body
+    public string? exercise_type { get; set; } // exercise complexity
     
     // Bool for bella days
     public bool bella_monday { get; set; }
