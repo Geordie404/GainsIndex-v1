@@ -20,6 +20,21 @@
     </div>
 </form>
 
+@* Geo or bella drop down *@
+
+<form asp-action="Catalog" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Person Filter: <select name="active_filter">
+                <option value="bella">bella</option>
+                <option value="geo">geo</option>
+                </select>
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Catalog">Back to Full List</a>
+        </p>
+    </div>
+</form>
+
 
 @foreach (var item in Model) {
     <div class="cbox">

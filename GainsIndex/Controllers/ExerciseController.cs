@@ -38,7 +38,7 @@ namespace GainsIndex.Controllers
 
         // Catalog - Comprehensive Exercise Database View
         [Authorize]
-        public async Task<IActionResult> Catalog(string name_filter)
+        public async Task<IActionResult> Catalog(string name_filter, string active_filter)
         {
             // ViewData["CurrentFilter"] = filter;
 
@@ -46,10 +46,19 @@ namespace GainsIndex.Controllers
                    select e;
 
 
-            if (!String.IsNullOrEmpty(name_filter))
-            {
-                exercises = exercises.Where(e => e.exercise_name.Contains(name_filter));
-            }
+            // if (!String.IsNullOrEmpty(name_filter))
+            // {
+            //     exercises = exercises.Where(e => e.exercise_name.Contains(active_filter));
+            // }
+
+            // if (!String.IsNullOrEmpty(active_filter) && string.Equals(active_filter, "bella"))
+            // {
+            //     exercises = exercises.Where(e => e.bella_monday == true);
+            // }
+            // if (!String.IsNullOrEmpty(active_filter) && string.Equals(active_filter, "geo"))
+            // {
+            //     exercises = exercises.Where(e => e.geo_friday == true);
+            // }
 
             return View(await exercises.AsNoTracking().ToListAsync());
 
