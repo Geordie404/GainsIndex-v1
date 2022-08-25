@@ -30,3 +30,9 @@ GainsIndex-v1
 
 - Where to start:
     - add filter to Exercise Home for days 
+
+- AUG 24 2022
+    - added catalog page
+    - started work on a days filter for the home page 
+    - created two new branches 
+    
