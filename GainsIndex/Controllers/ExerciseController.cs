@@ -37,58 +37,6 @@ namespace GainsIndex.Controllers
 
         }
 
-        // // Sort Home Page // logic in case needed for toggle for geo 
-        // public IActionResult HomeSort(string selectDay)
-        // {
-        //         // ViewBag.NameSortParm = String.IsNullOrEmpty(selectDay) ? "bella_mon" ; // attempt to use one tuple for a bunch of bools
-        //         ViewBag.MondaySortB = selectDay == "b_mon";
-        //         ViewBag.TuesdaySortB = selectDay == "b_tues";
-        //         ViewBag.WednesdaySortB = selectDay == "b_weds";
-        //         ViewBag.ThursdaySortB = selectDay == "b_thurs";
-        //         ViewBag.FridaySortB = selectDay == "b_fri";
-        //         ViewBag.WeekendSortB = selectDay == "b_end";
-
-        //         ViewBag.MondaySortG = selectDay == "g_mon";
-        //         ViewBag.TuesdaySortG = selectDay == "g_tues";
-        //         ViewBag.WednesdaySortG = selectDay == "g_weds";
-        //         ViewBag.ThursdaySortG = selectDay == "g_thurs";
-        //         ViewBag.FridaySortG = selectDay == "g_fri";
-        //         ViewBag.WeekendSortG = selectDay == "g_end";
-
-        //         var exercises = from e in _context.Exercises
-        //                     select e;
-        //         // if (!String.IsNullOrEmpty(searchString))
-        //         // {
-        //         //     students = students.Where(s => s.LastName.Contains(searchString)
-        //         //                         || s.FirstMidName.Contains(searchString));
-        //         // }
-        //         switch (selectDay)
-        //         {
-        //             case "b_mon":
-        //                 exercises = exercises.Where(e => e.bella_monday);
-        //                 break;
-        //             case "b_tues":
-        //                 exercises = exercises.Where(e => e.bella_tuesday);
-        //                 break;
-        //             case "b_weds":
-        //                 exercises = exercises.Where(e => e.bella_wednesday);
-        //                 break;
-        //             case "b_thurs":
-        //                 exercises = exercises.Where(e => e.bella_thursday);
-        //                 break;
-        //             case "b_fri":
-        //                 exercises = exercises.Where(e => e.bella_friday);
-        //                 break;
-        //             case "b_end":
-        //                 exercises = exercises.Where(e => e.bella_weekend);
-        //                 break;
-        //             default:
-        //                 exercises = exercises.Where(e => e.bella_monday);
-        //                 break;
-        //         }
-
-        //         return View(exercises.ToList());   
-        // }
 
         // Catalog - Comprehensive Exercise Database View
         [Authorize]
