@@ -5,4 +5,5 @@
 /GainsIndex/obj/**
 /GainsIndex/publish
 /GainsIndex/publish/**
+/.vscode
 .DS_Store
