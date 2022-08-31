@@ -163,6 +163,58 @@ namespace GainsIndex.Controllers
             return View(exercise);
         }
 
+        // GET: Exercise Limited Edit
+        [Authorize]
+        public async Task<IActionResult> Log(int? id)
+        {
+            if (id == null || _context.Exercises == null)
+            {
+                return NotFound();
+            }
+
+            var exercise = await _context.Exercises.FindAsync(id);
+            if (exercise == null)
+            {
+                return NotFound();
+            }
+            return View(exercise);
+        }
+
+        // POST: Exercise/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Log(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,log_bella,log_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_weekend,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_weekend")] Exercise exercise)
+        {
+            if (id != exercise.id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(exercise);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ExerciseExists(exercise.id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(exercise);
+        }
+
         // GET: Exercise/Delete/5
         [Authorize]
         public async Task<IActionResult> Delete(int? id)
