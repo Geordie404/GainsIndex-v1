@@ -53,7 +53,6 @@
                 <label asp-for="ww_geo" class="control-label">Geo Working Weight</label>
             </div>
  
- 
             @* Razor SelectList for motion/ body focus/ complexity enums *@
             <label></label>
             <div class="form-group">
@@ -64,8 +63,6 @@
                 @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))), "Complexity")
                 <span asp-validation-for="exercise_type" class="text-danger"></span>
             </div>
-
- 
 
             @* Razor TextArea for details *@
             <label asp-for="details" class="control-label"></label>
@@ -84,6 +81,7 @@
         </tr>
     </thead>
     <tbody>
+        @* Row for Bella *@
         <tr>
             <td>
                 Bella
@@ -125,6 +123,7 @@
                 </label></div>
             </td>
         </tr>
+        @* Row for Geo *@
         <tr>
             <td>
                 Geo
