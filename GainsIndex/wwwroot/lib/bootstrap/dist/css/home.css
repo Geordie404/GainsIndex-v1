@@ -56,11 +56,11 @@ h1.woi {
     align-content: center;
 }
 
-.cbox {
+.bbox {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border: #858585 solid 3px;
   border-radius: 2.5px;
-  background-color: black;
+  background-color: rgb(135, 240, 217);
   display: flex;
   flex-flow: column wrap; 
   justify-content: center;
@@ -73,7 +73,7 @@ h1.woi {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border: #858585 solid 3px;
   border-radius: 2.5px;
-  background-color: pink;
+  background-color: rgb(199, 137, 230);
   display: flex;
   flex-flow: column wrap; 
   justify-content: center;
