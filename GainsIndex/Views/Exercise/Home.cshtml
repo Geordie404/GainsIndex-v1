@@ -40,6 +40,18 @@
                 $(".bella").hide();
             });
         });
+        $(document).ready(function(){
+        $(".switch input").on("change", function(e) {
+            const isOn = e.currentTarget.checked;
+            if (isOn) {
+                $(".bella").hide();
+                $(".geo").show();
+            } else {
+                $(".geo").hide();
+                $(".bella").show();
+            }
+            });
+        });
     </script>
 
 </head>
@@ -63,22 +75,27 @@
             <option value="monday">Monday</option>
           	<option value="tuesday">Tuesday</option>
             <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="weekend">Weekend</option>
         </select>
     </div>
+    @* toggle button *@
     <div>
-        <h1>B/G</h1>
-        <button id="bella">B :-D</button>
-        <button id="geo">G >:-$%</button>
+        <div class="tglbox">
+        <p class="lbltext">user:</p>
+        <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+        </label>
+        </div>
     </div>
-
-@* @foreach (var item in Model) {
-    <div class="cbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
-        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
-        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+    @* user name display *@
+    <div class="user">
+        <p><pre><strong>Today's workout for: </strong><br></pre></p>
+        <p class="bella">bellllla!</p>
+        <p class="geo">GEO.</p>
     </div>
-} *@
 
 <div class="monday day">
 @foreach (var item in Model) {
@@ -138,8 +155,9 @@
 }
 </div>
 
-<div class="bella wednesday day">
+<div class="wednesday day">
 @foreach (var item in Model) {
+    <div class="bella">
     @if (item.bella_wednesday)
     {
         <div class="cbox">
@@ -147,9 +165,107 @@
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
-        <p>@Html.DisplayFor(modelItem => item.bella_wednesday) wednesday</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_wednesday) wedsyy</p>
         </div>
     }
+    </div>
+    <div class="geo">
+    @if (item.geo_wednesday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.geo_wednesday) g wednesday</p>
+        </div>
+    }
+    </div>
 }
+
+<div class="thursday day">
+@foreach (var item in Model) {
+    <div class="bella">
+    @if (item.bella_thursday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_thursday) b thursday </p>
+        </div>
+    }
+    </div>
+    <div class="geo">
+    @if (item.geo_thursday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.geo_thursday) g thursday</p>
+        </div>
+    }
+    </div>
+}
+
+<div class="friday day">
+@foreach (var item in Model) {
+    <div class="bella">
+    @if (item.bella_friday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_friday) b friii </p>
+        </div>
+    }
+    </div>
+    <div class="geo">
+    @if (item.geo_friday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.geo_friday) g friii </p>
+        </div>
+    }
+    </div>
+}
+
+<div class="weekend day">
+@foreach (var item in Model) {
+    <div class="bella">
+    @if (item.bella_weekend)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.bella_weekend) wknd </p>
+        </div>
+    }
+    </div>
+    <div class="geo">
+    @if (item.geo_weekend)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        <p>@Html.DisplayFor(modelItem => item.geo_weekend) g wknd </p>
+        </div>
+    }
+    </div>
+}
+
 </div>
 
