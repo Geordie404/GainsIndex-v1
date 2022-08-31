@@ -4,7 +4,7 @@
     ViewData["Title"] = "Log";
 }
 
-<h1>Log Exercise</h1>
+<h1>@Html.DisplayFor(m => m.exercise_name) Log</h1>
 
 <hr />
 <div class="row">
@@ -12,12 +12,6 @@
         <form asp-action="Log">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
-
-            @* Razor for exercise name *@
-            <div class="form-group">
-                @Html.DisplayFor(m => m.exercise_name)
-                <span asp-validation-for="exercise_name" class="text-danger"></span>
-            </div>
  
             @* Razor TextBox for sets *@
             <div class="form-group">
@@ -31,44 +25,45 @@
                 @Html.TextBoxFor(m => m.reps)
                 <span asp-validation-for="reps" class="text-danger"></span>
                 <label asp-for="reps" class="control-label"></label>
-            </div>
-            
-            @* Razor TextBox for bella workign weight *@
-            <div class="form-group">
-                @Html.TextBoxFor(m => m.ww_bella)
-                <span asp-validation-for="ww_bella" class="text-danger"></span>
-                <label asp-for="ww_bella" class="control-label">Bella Working Weight</label>
-            </div>
+            </div>            
 
             @* Razor TextBox for bella Log *@
+            <br>
             <label asp-for="log_bella" class="control-label">Bella Workout Log</label>
             <div class="form-group">
                 @Html.TextAreaFor(m => m.log_bella, new { cols="50", rows="5" })
                 <span asp-validation-for="log_bella" class="text-danger"></span>
             </div>
- 
+
+            @* Razor TextBox for bella workign weight *@
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.ww_bella)
+                <span asp-validation-for="ww_bella" class="text-danger"></span>
+                <label asp-for="ww_bella" class="control-label">Bella Working Weight</label>
+            </div>            
+
+             @* Razor TextBox for Geo Log *@
+            <br>
+            <label asp-for="log_geo" class="control-label">Geo Workout Log</label>
+            <div class="form-group">
+                @Html.TextAreaFor(m => m.log_geo, new { cols="50", rows="5" })
+                <span asp-validation-for="log_geo" class="text-danger"></span>
+            </div>
+
             @* Razor TextBox for geordie workign weight *@
             <div class="form-group">
                 @Html.TextBoxFor(m => m.ww_geo)
                 <span asp-validation-for="ww_geo" class="text-danger"></span>
                 <label asp-for="ww_geo" class="control-label">Geo Working Weight</label>
             </div>
-
-             @* Razor TextBox for Geo Log *@
-             <label asp-for="log_geo" class="control-label">Geo Workout Log</label>
-            <div class="form-group">
-                @Html.TextAreaFor(m => m.log_geo, new { cols="50", rows="5" })
-                <span asp-validation-for="log_geo" class="text-danger"></span>
-            </div>
  
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
+        <br>
     </div>
+    <div> <a asp-action="Index">Back to List</a></div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

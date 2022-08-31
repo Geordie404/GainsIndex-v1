@@ -56,17 +56,18 @@
             </div>
  
             @* Razor SelectList for motion/ body focus/ complexity enums *@
-            <label></label>
+            <br>
             <div class="form-group">
-                @Html.DropDownListFor(m => m.motion_group, new SelectList(Enum.GetValues(typeof(Motion))), "Motion Type")
+                @Html.DropDownListFor(m => m.motion_group, new SelectList(Enum.GetValues(typeof(Motion))))
                 <span asp-validation-for="motion_group" class="text-danger"></span>
-                @Html.DropDownListFor(m => m.body_focus, new SelectList(Enum.GetValues(typeof(Focus))), "Body Focus")
+                @Html.DropDownListFor(m => m.body_focus, new SelectList(Enum.GetValues(typeof(Focus))))
                 <span asp-validation-for="body_focus" class="text-danger"></span>
-                @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))), "Complexity")
+                @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))))
                 <span asp-validation-for="exercise_type" class="text-danger"></span>
             </div>
 
             @* Razor TextArea for details *@
+            <br>
             <label asp-for="details" class="control-label"></label>
             <div class="form-group">
                 @Html.TextAreaFor(m => m.details, new { cols="50", rows="5" })
@@ -75,100 +76,101 @@
            
 
     @* TABLE FOR DAYS *@
-
+    <br>
     <table class="table">
-    <thead>
-        <tr>
-            <th></th><th>M</th><th>T</th><th>W</th><th>Th</th><th>F</th><th>Wknd</th>
-        </tr>
-    </thead>
-    <tbody>
-        @* Row for Bella *@
-        <tr>
-            <td>
-                Bella
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="bella_monday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="bella_tuesday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="bella_wednesday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="bella_thursday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="bella_friday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="bella_weekend"/>
-                </label></div>
-            </td>
-        </tr>
-        @* Row for Geo *@
-        <tr>
-            <td>
-                Geo
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="geo_monday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="geo_tuesday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="geo_wednesday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="geo_thursday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="geo_friday"/>
-                </label></div>
-            </td>
-            <td>
-                <div class="form-group form-check"> 
-                <label class="form-check-label">
-                <input class="form-check-input" asp-for="geo_weekend"/>
-                </label></div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+        <thead>
+            <tr>
+                <th></th><th>M</th><th>T</th><th>W</th><th>Th</th><th>F</th><th>Wknd</th>
+            </tr>
+        </thead>
+        <tbody>
+            @* Row for Bella *@
+            <tr>
+                <td>
+                    Bella
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_monday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_tuesday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_wednesday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_thursday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_friday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="bella_weekend"/>
+                    </label></div>
+                </td>
+            </tr>
+            @* Row for Geo *@
+            <tr>
+                <td>
+                    Geo
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_monday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_tuesday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_wednesday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_thursday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_friday"/>
+                    </label></div>
+                </td>
+                <td>
+                    <div class="form-group form-check"> 
+                    <label class="form-check-label">
+                    <input class="form-check-input" asp-for="geo_weekend"/>
+                    </label></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
 
 
             <div class="form-group">
