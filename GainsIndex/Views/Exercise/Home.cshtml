@@ -74,8 +74,10 @@
             <option>Choose Day</option>
             <option value="monday">Monday</option>
           	<option value="tuesday">Tuesday</option>
+          	<option value="wednesday">Wednesday</option>
             <option value="thursday">Thursday</option>
             <option value="friday">Friday</option>
+            <option value="weekend">Weekend</option>
         </select>
     </div>
 
@@ -98,37 +100,37 @@
     </div>
 
 
-@* MONDAY *@
-<div class="monday day">
-@foreach (var item in Model) {
+    @* MONDAY *@
+    <div class="monday day">
+    @foreach (var item in Model) {
     <div class="bella">
-    @if (item.bella_monday)
-    {
-        <div class="cbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
-        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
-        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
-        </div>
-    }
+        @if (item.bella_monday)
+        {
+            <div class="gbox">
+            <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+            <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+            <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+            <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+            </div>
+        }
     </div>
     <div class="geo">
-     @if (item.geo_monday)
-    {
-        <div class="cbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
-        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
-        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
-        </div>
+        @if (item.geo_monday)
+        {
+            <div class="cbox">
+            <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+            <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+            <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+            <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+            </div>
+        }
+    </div>
     }
     </div>
-}
-</div>
 
-@* TUESDAY *@
-<div class="tuesday day">
-@foreach (var item in Model) {
+    @* TUESDAY *@
+    <div class="tuesday day">
+    @foreach (var item in Model) {
     <div class="bella">
     @if (item.bella_tuesday)
     {
@@ -151,12 +153,40 @@
         </div>
     }
     </div>
-}
-</div>
+    }
+    </div>
 
-@* THURSDAY *@
-<div class="thursday day">
-@foreach (var item in Model) {
+    @* WEDNESDAY *@
+    <div class="wednesday day">
+    @foreach (var item in Model) {
+    <div class="bella">
+    @if (item.bella_wednesday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        </div>
+    }
+    </div>
+    <div class="geo">
+    @if (item.geo_wednesday)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        </div>
+    }
+    </div>
+    }
+    </div>
+
+    @* THURSDAY *@
+    <div class="thursday day">
+    @foreach (var item in Model) {
     <div class="bella">
     @if (item.bella_thursday)
     {
@@ -179,12 +209,12 @@
         </div>
     }
     </div>
-}
-</div>
+    }
+    </div>
 
-@* FRIDAY *@
-<div class="friday day">
-@foreach (var item in Model) {
+    @* FRIDAY *@
+    <div class="friday day">
+    @foreach (var item in Model) {
     <div class="bella">
     @if (item.bella_friday)
     {
@@ -207,8 +237,37 @@
         </div>
     }
     </div>
-}
-</div>
+    }
+    </div>
+
+    @* WEEKEND *@
+    <div class="weekend day">
+    @foreach (var item in Model) {
+    <div class="bella">
+    @if (item.bella_weekend)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        </div>
+    }
+    </div>
+    <div class="geo">
+    @if (item.geo_weekend)
+    {
+        <div class="cbox">
+        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+        </div>
+    }
+    </div>
+    }
+    </div>
 
 </div>
+
 

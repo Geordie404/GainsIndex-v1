@@ -50,18 +50,26 @@ h1.woi {
     margin-bottom: 0px;
 }
 
-
 .woibox {
     display: flex;
     flex-flow: column wrap; 
     align-content: center;
 }
 
-.geotuesday {
+.cbox {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: #858585 solid 3px;
+  border-radius: 2.5px;
   background-color: black;
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: center;
+  width: 25em; 
+  margin: 1.25em;
+  padding: .75em;
 }
 
-.cbox {
+.gbox {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border: #858585 solid 3px;
   border-radius: 2.5px;
@@ -72,12 +80,6 @@ h1.woi {
   width: 25em; 
   margin: 1.25em;
   padding: .75em;
-}
-
-p.cbox {
-  flex-wrap: wrap;
-  padding: 20px;
-  color: blueviolet;
 }
 
 .switch {
