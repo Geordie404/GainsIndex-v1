@@ -4,9 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Exercise</h4>
+<h1>Create Exercise</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,147 +13,167 @@
 
             @* Razor for exercise name *@
             <div class="form-group">
-                <label asp-for="exercise_name" class="control-label"></label>
                 @Html.TextBoxFor(m => m.exercise_name)
                 <span asp-validation-for="exercise_name" class="text-danger"></span>
-            </div>
- 
-            @* Razor TextArea for details *@
-            <div class="form-group">
-                <label asp-for="details" class="control-label"></label>
-                @Html.TextAreaFor(m => m.details, new { cols="50", rows="10" })
-                <span asp-validation-for="details" class="text-danger"></span>
-            </div>
- 
-            @* Razor TextBox for bella workign weight *@
-            <div class="form-group">
-                <label asp-for="ww_bella" class="control-label"></label>
-                @Html.TextBoxFor(m => m.ww_bella)
-                <span asp-validation-for="ww_bella" class="text-danger"></span>
-            </div>
- 
-            @* Razor TextBox for geordie workign weight *@
-            <div class="form-group">
-                <label asp-for="ww_geo" class="control-label"></label>
-                @Html.TextBoxFor(m => m.ww_geo)
-                <span asp-validation-for="ww_geo" class="text-danger"></span>
+                <label asp-for="exercise_name" class="control-label">Exercise Name</label>
             </div>
  
             @* Razor TextBox for target muscle *@
             <div class="form-group">
-                <label asp-for="target_muscle" class="control-label"></label>
                 @Html.TextBoxFor(m => m.target_muscle)
                 <span asp-validation-for="target_muscle" class="text-danger"></span>
+                <label asp-for="target_muscle" class="control-label">Target Muscle</label>
             </div>
  
             @* Razor TextBox for sets *@
             <div class="form-group">
-                <label asp-for="sets" class="control-label"></label>
                 @Html.TextBoxFor(m => m.sets)
                 <span asp-validation-for="sets" class="text-danger"></span>
+                <label asp-for="sets" class="control-label"></label>
             </div>
  
             @* Razor TextBox for reps *@
             <div class="form-group">
-                <label asp-for="reps" class="control-label"></label>
                 @Html.TextBoxFor(m => m.reps)
                 <span asp-validation-for="reps" class="text-danger"></span>
+                <label asp-for="reps" class="control-label"></label>
+            </div>
+            
+            @* Razor TextBox for bella workign weight *@
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.ww_bella)
+                <span asp-validation-for="ww_bella" class="text-danger"></span>
+                <label asp-for="ww_bella" class="control-label">Bella Working Weight</label>
+            </div>
+ 
+            @* Razor TextBox for geordie workign weight *@
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.ww_geo)
+                <span asp-validation-for="ww_geo" class="text-danger"></span>
+                <label asp-for="ww_geo" class="control-label">Geo Working Weight</label>
             </div>
  
  
-            @* Razor SelectList for motion_group enum *@
+            @* Razor SelectList for motion/ body focus/ complexity enums *@
+            <label></label>
             <div class="form-group">
-                <label asp-for="motion_group" class="control-label"></label>
                 @Html.DropDownListFor(m => m.motion_group, new SelectList(Enum.GetValues(typeof(Motion))), "Motion Type")
                 <span asp-validation-for="motion_group" class="text-danger"></span>
-            </div>
- 
-            @* Razor SelectList for body_focus enum *@
-            <div class="form-group">
-                <label asp-for="body_focus" class="control-label"></label>
                 @Html.DropDownListFor(m => m.body_focus, new SelectList(Enum.GetValues(typeof(Focus))), "Body Focus")
                 <span asp-validation-for="body_focus" class="text-danger"></span>
-            </div>
- 
-            @* Razor SelectList for exercise_type enum *@
-            <div class="form-group">
-                <label asp-for="exercise_type" class="control-label"></label>
-                @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))), "Complexity Type")
+                @Html.DropDownListFor(m => m.exercise_type, new SelectList(Enum.GetValues(typeof(Complexity))), "Complexity")
                 <span asp-validation-for="exercise_type" class="text-danger"></span>
+            </div>
+
+ 
+
+            @* Razor TextArea for details *@
+            <label asp-for="details" class="control-label"></label>
+            <div class="form-group">
+                @Html.TextAreaFor(m => m.details, new { cols="50", rows="5" })
+                <span asp-validation-for="details" class="text-danger"></span>
             </div>
            
 
-            @* BOOLS for days *@
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_monday" /> @Html.DisplayNameFor(model => model.bella_monday)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_tuesday" /> @Html.DisplayNameFor(model => model.bella_tuesday)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_wednesday" /> @Html.DisplayNameFor(model => model.bella_wednesday)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_thursday" /> @Html.DisplayNameFor(model => model.bella_thursday)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_friday" /> @Html.DisplayNameFor(model => model.bella_friday)
-                </label>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="bella_weekend" /> @Html.DisplayNameFor(model => model.bella_weekend)
-                </label>
-            </div>
+    @* TABLE FOR DAYS *@
 
-            <div class="form-group form-check">
+    <table class="table">
+    <thead>
+        <tr>
+            <th></th><th>M</th><th>T</th><th>W</th><th>Th</th><th>F</th><th>Wknd</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Bella
+            </td>
+            <td>
+                <div class="form-group form-check"> 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_monday" /> @Html.DisplayNameFor(model => model.geo_monday)
-                </label>
-            </div>
-            <div class="form-group form-check">
+                <input class="form-check-input" asp-for="bella_monday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_tuesday" /> @Html.DisplayNameFor(model => model.geo_tuesday)
-                </label>
-            </div>
-            <div class="form-group form-check">
+                <input class="form-check-input" asp-for="bella_tuesday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_wednesday" /> @Html.DisplayNameFor(model => model.geo_wednesday)
-                </label>
-            </div>
-            <div class="form-group form-check">
+                <input class="form-check-input" asp-for="bella_wednesday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_thursday" /> @Html.DisplayNameFor(model => model.geo_thursday)
-                </label>
-            </div>
-            <div class="form-group form-check">
+                <input class="form-check-input" asp-for="bella_thursday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_friday" /> @Html.DisplayNameFor(model => model.geo_friday)
-                </label>
-            </div>
-            <div class="form-group form-check">
+                <input class="form-check-input" asp-for="bella_friday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="geo_weekend" /> @Html.DisplayNameFor(model => model.geo_weekend)
-                </label>
-            </div>
+                <input class="form-check-input" asp-for="bella_weekend"/>
+                </label></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Geo
+            </td>
+            <td>
+                <div class="form-group form-check"> 
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="geo_monday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="geo_tuesday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="geo_wednesday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="geo_thursday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="geo_friday"/>
+                </label></div>
+            </td>
+            <td>
+                <div class="form-group form-check"> 
+                <label class="form-check-label">
+                <input class="form-check-input" asp-for="geo_weekend"/>
+                </label></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index">Back to List</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
