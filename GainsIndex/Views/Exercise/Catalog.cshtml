@@ -1,63 +1,90 @@
 @model IEnumerable<Exercise>
 
 <head>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/home.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/catalog.css" />
 </head>
 
-<h1><i>Catalog</i></h1>
-<img src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png">
-
-@* filter for name input *@
-<form asp-action="Catalog" method="get">
-    <div class="form-actions no-color">
-        <p>
-            Find by name: <input type="text" name="name_filter" />
-            <input type="submit" value="Search" class="btn btn-default" /> |
-            <a asp-action="Catalog">Back to Full List</a>
-        </p>
+<header>
+    <div class="hdrcontent container">
+        <div class="gi">
+            <div class="giv1">
+                <h1 class="edgyname">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
+                <h1 class="v1">version 1</h1>
+            </div>
+            <p class="desc">track your workout routines</p>
+        </div>
+        <div class="homelink">
+            <a class="github" asp-controller="Exercise" asp-action="Home">⌂<i> Home </i>⌂</a>
+        </div>
     </div>
-</form>
+</header>
 
-@* filter for motion input *@
-<form asp-action="Catalog" method="get">
-    <div class="form-actions no-color">
-        <p>
-            Find by motion: <select name="motion_filter">
-            <option value="Push">Push</option>
-            <option value="Pull">Pull</option>
-            <option value="Hinge">Hinge</option>
-            <option value="Bend">Bend</option>
-            </select>
-            <input type="submit" value="Search" class="btn btn-default" />
-        </p>
+
+<body>
+<div class="container">
+<div class="catalog">
+    <h1><i>Catalog</i><img class="pkmn" src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png"></h1>
+    
+    <div class="filters">
+                @* filter for name input *@
+                <form asp-action="Catalog" method="get">
+                    <div class="form-actions no-color">
+                        <p>
+                            Find by name: <input type="text" name="name_filter" />
+                            <input type="submit" value="Search" class="btn btn-default" /> |
+                            <a asp-action="Catalog">Back to Full List</a>
+                        </p>
+                    </div>
+                </form>
+
+                @* filter for motion input *@
+                <form asp-action="Catalog" method="get">
+                    <div class="form-actions no-color">
+                        <p>
+                            Find by motion: <select name="motion_filter">
+                            <option value="Push">Push</option>
+                            <option value="Pull">Pull</option>
+                            <option value="Hinge">Hinge</option>
+                            <option value="Bend">Bend</option>
+                            </select>
+                            <input type="submit" value="Search" class="btn btn-default" />
+                        </p>
+                    </div>
+                </form>
+
+                @* filter for focus input *@
+                <form asp-action="Catalog" method="get">
+                    <div class="form-actions no-color">
+                        <p>
+                            Find by focus: <select name="focus_filter">
+                            <option value="Arms">Arms</option>
+                            <option value="Chest">Chest</option>
+                            <option value="Shoulders">Shoulders</option>
+                            <option value="Back">Back</option>
+                            <option value="Abdominals">Abdominals</option>
+                            <option value="Glutes">Glutes</option>
+                            <option value="Legs">Legs</option>
+                            </select>
+                            <input type="submit" value="Search" class="btn btn-default" />
+                        </p>
+                    </div>
+                </form>
     </div>
-</form>
-
-@* filter for focus input *@
-<form asp-action="Catalog" method="get">
-    <div class="form-actions no-color">
-        <p>
-            Find by focus: <select name="focus_filter">
-            <option value="Arms">Arms</option>
-            <option value="Chest">Chest</option>
-            <option value="Shoulders">Shoulders</option>
-            <option value="Back">Back</option>
-            <option value="Abdominals">Abdominals</option>
-            <option value="Glutes">Glutes</option>
-            <option value="Legs">Legs</option>
-            </select>
-            <input type="submit" value="Search" class="btn btn-default" />
-        </p>
+    <div class="cisecards">
+    @foreach (var item in Model) {
+        <div class="card">
+            <div class="cisename"><h2 class="cardname">@Html.DisplayFor(modelItem => item.exercise_name)</h2></div>
+            <div class="attributes">
+                <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
+                <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+                <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+            </div>
+            <div class="cardbtn"><a asp-action="Details" asp-route-id="@item.id"><p>Details</p></a></div>
+        </div>
+    }
     </div>
-</form>
+</div>
+</div>
 
 
-
-@foreach (var item in Model) {
-    <div class="cbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
-        <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
-        <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
-    </div>
-}
+</body>
