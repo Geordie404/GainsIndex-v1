@@ -4,83 +4,84 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>@Html.DisplayFor(model => model.exercise_name)</h1>
-<hr />
-@* Reformated Details *@
-<div>@Html.DisplayFor(model => model.details)</div>
-<br>
-<div><b>Target Muscle: </b>@Html.DisplayFor(model => model.target_muscle)</div>
-<div><b>Motion Group: </b>@Html.DisplayFor(model => model.motion_group)</div>
-<div><b>Body Focus: </b>@Html.DisplayFor(model => model.body_focus)</div>
-<div><b>Exercise Complexity: </b>@Html.DisplayFor(model => model.exercise_type)</div>
-<div><b>Sets: </b>@Html.DisplayFor(model => model.sets)<b>, Reps: </b>@Html.DisplayFor(model => model.reps)</div>
-<div><b>Bella Working Weight: </b>@Html.DisplayFor(model => model.ww_bella)</div>
-<div><b>Geo Working Weight: </b>@Html.DisplayFor(model => model.ww_geo)</div>
-<br>
-
-<div class="col-md-5">
-    @* TABLE FOR DAYS *@
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th></th><th>M</th><th>T</th><th>W</th><th>Th</th><th>F</th><th>Wknd</th>
-            </tr>
-        </thead>
-        <tbody>
-            @* Row for Bella *@
-            <tr>
-                <td>
-                    Bella
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.bella_monday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.bella_tuesday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.bella_wednesday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.bella_thursday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.bella_friday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.bella_weekend)
-                </td>
-            </tr>
-            @* Row for Geo *@
-            <tr>
-                <td>
-                    Geo
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.geo_monday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.geo_tuesday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.geo_wednesday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.geo_thursday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.geo_friday)
-                </td>
-                <td>
-                    @Html.DisplayFor(model => model.geo_weekend)
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container">
+    <h1>@Html.DisplayFor(model => model.exercise_name)</h1>
+    <hr />
+    @* Reformated Details *@
+    <div>@Html.DisplayFor(model => model.details)</div>
     <br>
-<div>
+    <div><b>Target Muscle: </b>@Html.DisplayFor(model => model.target_muscle)</div>
+    <div><b>Motion Group: </b>@Html.DisplayFor(model => model.motion_group)</div>
+    <div><b>Body Focus: </b>@Html.DisplayFor(model => model.body_focus)</div>
+    <div><b>Exercise Complexity: </b>@Html.DisplayFor(model => model.exercise_type)</div>
+    <div><b>Sets: </b>@Html.DisplayFor(model => model.sets)<b>, Reps: </b>@Html.DisplayFor(model => model.reps)</div>
+    <div><b>Bella Working Weight: </b>@Html.DisplayFor(model => model.ww_bella)</div>
+    <div><b>Geo Working Weight: </b>@Html.DisplayFor(model => model.ww_geo)</div>
+    <br>
 
+    <div class="col-md-5">
+        @* TABLE FOR DAYS *@
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th><th>M</th><th>T</th><th>W</th><th>Th</th><th>F</th><th>Wknd</th>
+                </tr>
+            </thead>
+            <tbody>
+                @* Row for Bella *@
+                <tr>
+                    <td>
+                        Bella
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.bella_monday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.bella_tuesday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.bella_wednesday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.bella_thursday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.bella_friday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.bella_weekend)
+                    </td>
+                </tr>
+                @* Row for Geo *@
+                <tr>
+                    <td>
+                        Geo
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.geo_monday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.geo_tuesday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.geo_wednesday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.geo_thursday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.geo_friday)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.geo_weekend)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    <div>
+</div>
  
 
 <div>
