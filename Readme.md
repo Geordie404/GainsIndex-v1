@@ -1,4 +1,4 @@
-GainsIndex-v1
+GainsIndex-v1 https://gainsindex.azurewebsites.net/
 
 ## HOME INDEX PAGE 
 - Design plans: a home page that shows
@@ -20,6 +20,7 @@ GainsIndex-v1
 
 ### UPDATES 
 - AUG 23 2022
+    - Overhauled idea for recipe book into workout index
     - added custom css file for Exercise Home 
     - created css conventions for specific pages
     - created design plan
@@ -35,4 +36,20 @@ GainsIndex-v1
     - added catalog page
     - started work on a days filter for the home page 
     - created two new branches 
-    
+
+- AUG 30 2022
+    - added log and detals page
+    - updated home and catalog pages
+
+- Aug 31 2022
+    - refined Jquery on home page for day filter and finished functionality
+    - added large changed to CSS sitewide
+    - cleaned up HTML on all views
+    - added About page
+
+### TODO
+    - fix jump links across views
+    - fix header across all views
+    - fix organization of toggle and drop down on home page
+    - make improvements and personalizations to CSS
+    - add more pokemon sprites
