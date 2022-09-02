@@ -14,6 +14,7 @@
 <div class="container">
     <h1>@Html.DisplayFor(m => m.exercise_name) Log</h1>
 
+        @* Contents from Edit that arent shown but are still needed *@
         <form asp-action="Log">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />

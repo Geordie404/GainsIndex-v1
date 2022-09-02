@@ -49,12 +49,21 @@ GainsIndex-v1 https://gainsindex.azurewebsites.net/
 
 - Sep 1 2022
     - clean up headers
+    - added CSS to Home
+    - cleaned up views for Edit, Log, Details
+    - hide inputs in Log to add functionality
+
+- Sep 2 2022
+    - changed display of catalog to be more compact
+    - changed cards on catalog
+    - image for submit functionality on catalog
+
+### TODO
+ - clean up headers
     - clean up jump links
     - clean up catalog search filtering
     - add check box to cards
     - add footer
-
-### TODO
     - fix jump links across views
     - fix header across all views
     - fix organization of toggle and drop down on home page
