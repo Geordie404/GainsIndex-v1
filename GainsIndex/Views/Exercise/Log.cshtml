@@ -4,69 +4,96 @@
     ViewData["Title"] = "Log";
 }
 
-<div class="container">
-<h1>@Html.DisplayFor(m => m.exercise_name) Log</h1>
+<style>
+    div.scroll{
+        overflow-y: auto;
+        max-height: 150px;
+        background:rgba(0,0,0,0.05);
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    div.oneline {
+        display: inline-block;
+        vertical-align: left;
+    }
+</style>
+
+<div class="container">
+    <h1>@Html.DisplayFor(m => m.exercise_name) Log</h1>
+
         <form asp-action="Log">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
+
+             @* Razor Display for Details *@
+            
+            <div class ="scroll">@Html.DisplayFor(model => model.details)</div>
+            
  
             @* Razor TextBox for sets *@
-            <div class="form-group">
-                @Html.TextBoxFor(m => m.sets)
+            <div class="form-group oneline">
+                @Html.TextBoxFor(m => m.sets, new { style="width:30px;" })
                 <span asp-validation-for="sets" class="text-danger"></span>
                 <label asp-for="sets" class="control-label"></label>
             </div>
  
             @* Razor TextBox for reps *@
-            <div class="form-group">
-                @Html.TextBoxFor(m => m.reps)
+            <div class="form-group oneline">
+                @Html.TextBoxFor(m => m.reps, new { style="width:100px;" })
                 <span asp-validation-for="reps" class="text-danger"></span>
                 <label asp-for="reps" class="control-label"></label>
-            </div>            
-
-            @* Razor TextBox for bella Log *@
+            </div>    
+            <br> 
             <br>
-            <label asp-for="log_bella" class="control-label">Bella Workout Log</label>
-            <div class="form-group">
-                @Html.TextAreaFor(m => m.log_bella, new { cols="50", rows="5" })
-                <span asp-validation-for="log_bella" class="text-danger"></span>
-            </div>
 
             @* Razor TextBox for bella workign weight *@
             <div class="form-group">
-                @Html.TextBoxFor(m => m.ww_bella)
+                @Html.TextBoxFor(m => m.ww_bella, new { style="width:30px;" })
                 <span asp-validation-for="ww_bella" class="text-danger"></span>
-                <label asp-for="ww_bella" class="control-label">Bella Working Weight</label>
-            </div>            
+                <label asp-for="ww_bella" class="control-label">Bella Working Weight & Past Exercise Log</label>
+            </div>       
+            <br> 
 
-             @* Razor TextBox for Geo Log *@
-            <br>
-            <label asp-for="log_geo" class="control-label">Geo Workout Log</label>
+            @* Razor TextBox for bella Log *@
+
             <div class="form-group">
-                @Html.TextAreaFor(m => m.log_geo, new { cols="50", rows="5" })
-                <span asp-validation-for="log_geo" class="text-danger"></span>
+                @Html.TextAreaFor(m => m.log_bella, new { cols="50", rows="4" })
+                <span asp-validation-for="log_bella" class="text-danger"></span>
+                @* <label asp-for="log_bella" class="control-label"></label> *@
             </div>
+            <br>
 
             @* Razor TextBox for geordie workign weight *@
             <div class="form-group">
-                @Html.TextBoxFor(m => m.ww_geo)
+                @Html.TextBoxFor(m => m.ww_geo, new { style="width:30px;" })
                 <span asp-validation-for="ww_geo" class="text-danger"></span>
-                <label asp-for="ww_geo" class="control-label">Geo Working Weight</label>
+                <label asp-for="ww_geo" class="control-label">Geo Working Weight & Past Exercise Log</label>
+            </div>   
+            <br>     
+
+             @* Razor TextBox for Geo Log *@
+            <div class="form-group">
+                @Html.TextAreaFor(m => m.log_geo, new { cols="50", rows="4" })
+                <span asp-validation-for="log_geo" class="text-danger"></span>
+                @* <label asp-for="log_geo" class="control-label"></label> *@
             </div>
             <br>
  
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" /> 
+                <a asp-action="Details" class="btn btn-primary" asp-route-id="@Model?.id">Details</a>
+                <a asp-action="Home" class="btn btn-primary">Home</a>
+                <a asp-action="Catalog" class="btn btn-primary">Catalog</a>
+                <a asp-action="Index" class="btn btn-primary">Index</a>
             </div>
         </form>
-        <br>
-    </div>
-    <div> <a asp-action="Index">Back to List</a></div>
+
+    </div> 
 </div>
-</div>
+
 
 
