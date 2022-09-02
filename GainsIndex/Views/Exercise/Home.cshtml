@@ -66,6 +66,7 @@
 </head>
 
 <header>
+    <div class="gains">
     <div class="gi">
         <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
         <h1 class="v1">v1</h1>
@@ -75,6 +76,7 @@
         <a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
         <a class="github" asp-controller="Exercise" asp-action="Catalog"><i>catalog</i></a>
         <a class="github" asp-controller="Exercise" asp-action="Index"><i>INDEX :-B</i></a>
+    </div>
     </div>
 </header>
 
@@ -110,7 +112,7 @@
         @if (item.bella_monday)
         {
             <div class="bbox">
-                <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+                <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
                 <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
                 <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
                 <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -121,7 +123,7 @@
         @if (item.geo_monday)
         {
             <div class="gbox">
-            <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+            <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
             <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
             <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
             <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -138,7 +140,7 @@
     @if (item.bella_tuesday)
     {
         <div class="bbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -149,7 +151,7 @@
     @if (item.geo_tuesday)
     {
         <div class="gbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -166,7 +168,7 @@
     @if (item.bella_wednesday)
     {
         <div class="bbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -177,7 +179,7 @@
     @if (item.geo_wednesday)
     {
         <div class="gbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -194,7 +196,7 @@
     @if (item.bella_thursday)
     {
         <div class="bbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -205,7 +207,7 @@
     @if (item.geo_thursday)
     {
         <div class="gbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -222,7 +224,7 @@
     @if (item.bella_friday)
     {
         <div class="bbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -233,7 +235,7 @@
     @if (item.geo_friday)
     {
         <div class="gbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -250,7 +252,7 @@
     @if (item.bella_weekend)
     {
         <div class="bbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
@@ -261,7 +263,7 @@
     @if (item.geo_weekend)
     {
         <div class="gbox">
-        <h2 class="woi">@Html.DisplayFor(modelItem => item.exercise_name)</h2>
+        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
         <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
         <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
         <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>

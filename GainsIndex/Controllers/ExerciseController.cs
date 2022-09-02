@@ -158,10 +158,12 @@ namespace GainsIndex.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Catalog));
             }
             return View(exercise);
         }
+        
+      
 
         // GET: Exercise Limited Edit
         [Authorize]
@@ -185,7 +187,7 @@ namespace GainsIndex.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Log(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,log_bella,log_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_weekend,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_weekend")] Exercise exercise)
+     public async Task<IActionResult> Log(int id, [Bind("id,exercise_name,details,ww_bella,ww_geo,log_bella,log_geo,target_muscle,sets,reps,motion_group,body_focus,exercise_type,bella_monday,bella_tuesday,bella_wednesday,bella_thursday,bella_friday,bella_weekend,geo_monday,geo_tuesday,geo_wednesday,geo_thursday,geo_friday,geo_weekend")] Exercise exercise)
         {
             if (id != exercise.id)
             {

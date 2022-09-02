@@ -19,6 +19,10 @@ header {
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
 }
 
+.gains {
+  margin: 1em 0;
+}
+
 .gi {
     display: flex;
     align-items: baseline;
@@ -37,20 +41,19 @@ header {
   line-height: 0px;
 }
 
-
-.github {
-    color: rgb(74, 87, 207);
-    line-height: 1em;
-    text-shadow: 1px 1px 10px grey;
-    padding-left: 6em;
-}
-
 .desc {
-    margin-left: 6em;
-    margin-bottom: 0px;
+  padding: 0 1rem;
+  margin: 0;
 }
 
 .links {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.links a {
+    padding: 0 1rem;
+    margin: 0;
 
 }
 
@@ -151,7 +154,14 @@ display:flex;
 
 /* Phone Breakpoint */
 @media only screen and (max-width: 480px) {
-    
+
+header , body {
+  background-color: rgb(33, 33, 60);
+  color: lavender;
+}
+header {
+  box-shadow: 0 0 1rem 0 rgb(5, 5, 10);
+}
 .gi {
   display: flex;
   flex-flow: row wrap;
@@ -159,13 +169,82 @@ display:flex;
   justify-content: center;
 }
 .woi {
-  color: darkgoldenrod;
+  color: rgb(118, 255, 244);
   font-size: 2.0rem;
+}
+.desc {
+  color: lavender;
 }
 .v1 {
   font-size: 1rem;
+  color: rgb(156, 103, 255);
+}
+.wocards {
+  color: rgb(33, 33, 60)
+}
+ }
+
+
+ @media (min-width: 1200px) {
+
+  header {
+    display: flex;
+    flex-flow: column wrap; 
+    align-content: flex-start;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+    padding: 0 1em;
+    background-color: rgb(33, 33, 36);
+  }
+
+  .gains {
+    margin: 1em 0;
+  }
+
+  .gi {
+      display: flex;
+      align-items: baseline;
+  }
+
+  .woi {
+    color: darkgoldenrod;
+    font-size: 5rem;
+  }
+
+  .desc , .links {
+    margin-left: 2em;
+    color: lavender;
+  }
+
+  .wocards {
+    display: flex;
+    flex-flow: column wrap; 
+    align-content: center;
 }
 
+.bbox {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: #858585 solid 3px;
+  border-radius: 2.5px;
+  background-color: rgb(135, 240, 217);
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: center;
+  width: 50em; 
+  margin: 1.25em;
+  padding: .75em;
+}
 
+.gbox {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: #858585 solid 3px;
+  border-radius: 2.5px;
+  background-color: rgb(199, 137, 230);
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: center;
+  width: 50em; 
+  margin: 1.25em;
+  padding: .75em;
+}
 
-  }
+ }
