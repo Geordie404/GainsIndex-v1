@@ -57,15 +57,17 @@ GainsIndex-v1 https://gainsindex.azurewebsites.net/
     - changed display of catalog to be more compact
     - changed cards on catalog
     - image for submit functionality on catalog
+    - log return to home on save
 
 ### TODO
- - clean up headers
-    - clean up jump links
-    - clean up catalog search filtering
-    - add check box to cards
-    - add footer
-    - fix jump links across views
-    - fix header across all views
-    - fix organization of toggle and drop down on home page
-    - make improvements and personalizations to CSS
-    - add more pokemon sprites
+- clean up headers
+- clean up jump links
+- clean up catalog search filtering
+- add check box to cards
+- clean up card flex layout
+- add footer
+- fix jump links across views
+- fix header across all views
+- fix organization of toggle and drop down on home page
+- make improvements and personalizations to CSS
+- add more pokemon sprites
