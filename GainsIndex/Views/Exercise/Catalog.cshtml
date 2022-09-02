@@ -79,9 +79,9 @@
         <div class="card">
             <div class="cisename"><h2 class="cardname">@Html.DisplayFor(modelItem => item.exercise_name)</h2></div>
             <div class="attributes">
-                <p>Sets: @Html.DisplayFor(modelItem => item.sets) Reps: @Html.DisplayFor(modelItem => item.reps)</p>
+                @* <p>Sets: @Html.DisplayFor(modelItem => item.sets) Reps: @Html.DisplayFor(modelItem => item.reps)</p>
                 <p>Bella Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-                <p>Geo Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
+                <p>Geo Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p> *@
             </div>
             <div class="cardbtn"><a asp-action="Details" asp-route-id="@item.id"><p>Details</p></a></div>
         </div>
