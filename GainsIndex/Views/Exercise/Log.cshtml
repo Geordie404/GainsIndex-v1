@@ -4,9 +4,12 @@
     ViewData["Title"] = "Log";
 }
 
+
 <head>
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/log.css" />
 </head>
+
+
 
 <div class="container">
     <h1>@Html.DisplayFor(m => m.exercise_name) Log</h1>
@@ -74,6 +77,9 @@
                 @* <label asp-for="log_geo" class="control-label"></label> *@
             </div>
             <br>
+
+            <hr> 
+
  
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" /> 
