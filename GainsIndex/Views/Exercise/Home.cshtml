@@ -68,16 +68,17 @@
 <header>
     <div class="gi">
         <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
-        <h1 class="bark">version 1</h1>
+        <h1 class="v1">v1</h1>
     </div>
     <p class="desc">track your workout routines</p>
-    <a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
-    <a class="github" asp-controller="Exercise" asp-action="Catalog"><i>catalog</i></a>
-    <a class="github" asp-controller="Exercise" asp-action="Index"><i>INDEX :-B</i></a>
+    <div class="links">
+        <a href="https://github.com/Geordie404/GainsIndex-v1"><p class="github">github repo</p></a>
+        <a class="github" asp-controller="Exercise" asp-action="Catalog"><i>catalog</i></a>
+        <a class="github" asp-controller="Exercise" asp-action="Index"><i>INDEX :-B</i></a>
+    </div>
 </header>
 
-<div class="woibox">   
-    <div> 
+<div class="weekdayfetch"> 
          @* toggle button *@
         <span class="tglbox">
         <label class="switch">
@@ -98,8 +99,9 @@
             <option value="Friday">Friday</option>
             <option value="Saturday">Weekend</option>
         </select> 
-    </div>
+</div>
 
+<div class="wocards">  
 
     @* MONDAY *@
     <div class="Monday day">

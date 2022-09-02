@@ -24,12 +24,12 @@ header {
     align-items: baseline;
 }
 
-h1.woi {
+.woi {
   color: darkgoldenrod;
   font-size: 5rem;
 }
 
-.bark {
+.v1 {
   color: darkblue;
   text-align: center;
   font-family: "DotGothic16";
@@ -50,7 +50,11 @@ h1.woi {
     margin-bottom: 0px;
 }
 
-.woibox {
+.links {
+
+}
+
+.wocards {
     display: flex;
     flex-flow: column wrap; 
     align-content: center;
@@ -145,10 +149,23 @@ display:flex;
 }
 
 
+/* Phone Breakpoint */
+@media only screen and (max-width: 480px) {
+    
+.gi {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+.woi {
+  color: darkgoldenrod;
+  font-size: 2.0rem;
+}
+.v1 {
+  font-size: 1rem;
+}
 
-/* @media only screen and (max-width: 600px) {
-    body {
-      color: hotpink;
-      font-family: 'Courier New', Courier, monospace;
-    }
-  } */
+
+
+  }
