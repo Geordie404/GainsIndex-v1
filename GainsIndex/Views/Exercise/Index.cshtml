@@ -1,10 +1,26 @@
 @model IEnumerable<Exercise>
 
-<h1>【 ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/header.css" />
+</head>
 
-<div class ="container">
+<header>
+    <div class="gains">
+    <div class="gi">
+        <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
+        <h1 class="v1">v1</h1>
+    </div>
+    <div class="links">
+        <a class="github" asp-controller="Exercise" asp-action="Home"><i>Workout</i></a>
+        <a class="github" asp-controller="Exercise" asp-action="Catalog"><i>Catalog</i></a>
+        <a class="github" asp-controller="Home" asp-action="About"><i>About</i></a>
+        <a class="github" href="https://github.com/Geordie404/GainsIndex-v1">Git</a>
+    </div>
+    </div>
+</header>
 
-<table class="table">
+<div class="container">
+<table class="table" cellspacing="0" cellpadding="0">
     <tbody>
         <tr>
             <td>
@@ -17,10 +33,10 @@
                 @Html.DisplayFor(modelItem => item.exercise_name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Log" asp-route-id="@item.id">Log</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a>&nbsp
+                <a asp-action="Log" asp-route-id="@item.id">Log</a>&nbsp
+                <a asp-action="Details" asp-route-id="@item.id">Details</a>&nbsp
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>&nbsp
             </td>
         </tr>
 }

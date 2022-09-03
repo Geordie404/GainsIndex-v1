@@ -51,9 +51,9 @@ h1.edgyname {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border: #858585 solid 3px;
+    border: #ebb8ff solid 3px;
     border-radius: 2.5px;
-    background-color: rgb(250, 250, 200);
+    background-color: rgb(159, 243, 214);
     display: flex;
     flex-flow: row nowrap; 
     justify-content: space-between;

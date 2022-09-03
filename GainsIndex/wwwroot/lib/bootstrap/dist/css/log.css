@@ -14,3 +14,11 @@ div.oneline {
     vertical-align: left;
 }
 
+tr {
+    border: none;
+}
+
+td {
+    color: white;
+    border-block: 0;
+}
