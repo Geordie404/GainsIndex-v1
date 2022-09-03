@@ -1,25 +1,22 @@
 @model IEnumerable<Exercise>
 
 <head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/header.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/catalog.css" />
 </head>
 
 <header>
-    <div class="hdrcontent container">
-        <div class="gi">
-            <div class="giv1">
-                <h1 class="edgyname">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
-                <h1 class="v1">version 1</h1>
-            </div>
-            <p class="desc">track your workout routines</p>
-        </div>
-        <div class="homelink">
-            <a class="github" asp-controller="Exercise" asp-action="Home">⌂<i> Home </i>⌂</a>
-            <a class="github" asp-controller="Home" asp-action="About">⌂<i> About </i>⌂</a>
-            <a class="github" asp-controller="Exercise" asp-action="Index">⌂<i> Index </i>⌂</a>
-            <a href="https://github.com/Geordie404/GainsIndex-v1">⌂<i> GitHub </i>⌂</a>
-            
-        </div>
+    <div class="gains">
+    <div class="gi">
+        <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
+        <h1 class="v1">v1</h1>
+    </div>
+    <div class="links">
+        <a class="github" asp-controller="Exercise" asp-action="Home"><i>Workout</i></a>
+        <a class="github" asp-controller="Exercise" asp-action="Index"><i>Index</i></a>
+        <a class="github" asp-controller="Home" asp-action="About"><i>About</i></a>
+        <a class="github" href="https://github.com/Geordie404/GainsIndex-v1">GitHub</a>
+    </div>
     </div>
 </header>
 
