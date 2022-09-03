@@ -57,6 +57,37 @@ header {
 
 }
 
+.weekdayfetch{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.usrday {
+  display: flex;
+  align-items: baseline;
+  width: 300px;
+  
+}
+
+.username {
+  padding: 10px 0px;
+}
+
+.selectday {
+  padding: 0px;
+}
+
+.tglbox {
+  display:flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .wocards {
     display: flex;
     flex-flow: column wrap; 
@@ -92,8 +123,8 @@ header {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 44px;
+  height: 18px;
 }
 
 .switch input { 
@@ -117,8 +148,8 @@ header {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 10px;
+  width: 10px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -140,16 +171,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.g { display: none; }
 
-.tglbox {
-display:flex;
-}
-
-.user {
-  display: flex;
-  flex-wrap: nowrap;
-}
 
 
 /* Phone Breakpoint */
