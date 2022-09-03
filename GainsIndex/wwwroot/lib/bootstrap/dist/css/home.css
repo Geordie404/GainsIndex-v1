@@ -49,12 +49,12 @@ header {
 .links {
     display: flex;
     flex-flow: row wrap;
+    padding-top: 5px;
 }
 
 .links a {
     padding: 0 1rem;
-    margin: 0;
-
+    padding-right: 3rem;
 }
 
 .wocards {
