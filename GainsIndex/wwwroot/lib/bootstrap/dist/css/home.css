@@ -172,8 +172,6 @@ input:checked + .slider:before {
 }
 
 
-
-
 /* Phone Breakpoint */
 @media only screen and (max-width: 480px) {
 
@@ -270,3 +268,11 @@ header {
 }
 
  }
+.tglbox {
+display:flex;
+}
+
+.user {
+  display: flex;
+  flex-wrap: nowrap;
+}
