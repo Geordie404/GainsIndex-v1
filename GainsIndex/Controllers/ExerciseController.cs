@@ -212,7 +212,7 @@ namespace GainsIndex.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Home)); // return to home not index
             }
             return View(exercise);
         }

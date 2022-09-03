@@ -15,6 +15,10 @@
         </div>
         <div class="homelink">
             <a class="github" asp-controller="Exercise" asp-action="Home">⌂<i> Home </i>⌂</a>
+            <a class="github" asp-controller="Home" asp-action="About">⌂<i> About </i>⌂</a>
+            <a class="github" asp-controller="Exercise" asp-action="Index">⌂<i> Index </i>⌂</a>
+            <a href="https://github.com/Geordie404/GainsIndex-v1">⌂<i> GitHub </i>⌂</a>
+            
         </div>
     </div>
 </header>
@@ -23,40 +27,40 @@
 <body>
 <div class="container">
 <div class="catalog">
-    <h1><i>Catalog</i><img class="pkmn" src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png"></h1>
-    
+    <h1><i>Catalog</i><img class="pkmn" src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png">&nbsp&nbsp<a asp-action="Catalog">Unfilter</a></h1>
+    <h3>Filter Catalog by...</h3>
+
     <div class="filters">
                 @* filter for name input *@
                 <form asp-action="Catalog" method="get">
-                    <div class="form-actions no-color">
-                        <p>
-                            Find by name: <input type="text" name="name_filter" />
-                            <input type="submit" value="Search" class="btn btn-default" /> |
-                            <a asp-action="Catalog">Back to Full List</a>
-                        </p>
+                    <div class="form-actions no-color" style="display: flex; flex-direction: row">
+                            <input type="text"  name="name_filter" placeholder="Name" style="width:80px; height:100%" />
+                            <input type="image" src="https://i.pinimg.com/originals/7c/9d/fb/7c9dfba364d22e9318aaa63bab6c8658.gif" height="30" width="30" alt="Submit Form" />
                     </div>
                 </form>
 
                 @* filter for motion input *@
                 <form asp-action="Catalog" method="get">
-                    <div class="form-actions no-color">
-                        <p>
-                            Find by motion: <select name="motion_filter">
+                    <div class="form-actions no-color" style="display: flex; flex-direction: row">
+                        
+                        <select name="motion_filter" style="width:80px; height:100%">
+                            <option value="">Motion</option>
                             <option value="Push">Push</option>
                             <option value="Pull">Pull</option>
                             <option value="Hinge">Hinge</option>
                             <option value="Bend">Bend</option>
-                            </select>
-                            <input type="submit" value="Search" class="btn btn-default" />
-                        </p>
+                        </select>
+                        <input type="image" src="https://i.pinimg.com/originals/7c/9d/fb/7c9dfba364d22e9318aaa63bab6c8658.gif" height="30" width="30" alt="Submit Form" />
+                        
                     </div>
                 </form>
 
                 @* filter for focus input *@
                 <form asp-action="Catalog" method="get">
-                    <div class="form-actions no-color">
-                        <p>
-                            Find by focus: <select name="focus_filter">
+                    <div class="form-actions no-color" style="display: flex; flex-direction: row;">
+                        
+                        <select name="focus_filter" style="width:80px; height:100%">
+                            <option value="">Focus</option>
                             <option value="Arms">Arms</option>
                             <option value="Chest">Chest</option>
                             <option value="Shoulders">Shoulders</option>
@@ -64,9 +68,9 @@
                             <option value="Abdominals">Abdominals</option>
                             <option value="Glutes">Glutes</option>
                             <option value="Legs">Legs</option>
-                            </select>
-                            <input type="submit" value="Search" class="btn btn-default" />
-                        </p>
+                        </select>
+                        <input type="image" src="https://i.pinimg.com/originals/7c/9d/fb/7c9dfba364d22e9318aaa63bab6c8658.gif" height="30" width="30" alt="Submit Form" />
+                        
                     </div>
                 </form>
     </div>
@@ -75,9 +79,9 @@
         <div class="card">
             <div class="cisename"><h2 class="cardname">@Html.DisplayFor(modelItem => item.exercise_name)</h2></div>
             <div class="attributes">
-                <p>Motion: @Html.DisplayFor(modelItem => item.motion_group)</p>
-                <p>Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
-                <p>Type: @Html.DisplayFor(modelItem => item.exercise_type)</p>
+                @* <p>Sets: @Html.DisplayFor(modelItem => item.sets) Reps: @Html.DisplayFor(modelItem => item.reps)</p>
+                <p>Bella Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
+                <p>Geo Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p> *@
             </div>
             <div class="cardbtn"><a asp-action="Details" asp-route-id="@item.id"><p>Details</p></a></div>
         </div>
