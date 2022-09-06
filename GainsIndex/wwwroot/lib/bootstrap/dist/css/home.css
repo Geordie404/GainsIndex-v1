@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-color: lavender;
+    background-color: rgb(33, 33, 60);
 }
 
 *, ::before, ::after {
@@ -12,49 +12,18 @@ body {
     max-width: 1275px;
 }
 
-header {
-    display: flex;
-    flex-flow: column wrap; 
-    align-content: flex-start;
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+.desc{
+  padding-left: 4rem;
 }
 
-.gains {
-  margin: 1em 0;
+.todayis {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1rem 1.5rem 0 1.5rem;
 }
 
-.gi {
-    display: flex;
-    align-items: baseline;
-}
-
-.woi {
-  color: darkgoldenrod;
-  font-size: 5rem;
-}
-
-.v1 {
-  color: darkblue;
-  text-align: center;
-  font-family: "DotGothic16";
-  font-size: 1.3rem;
-  line-height: 0px;
-}
-
-.desc {
-  padding: 0 1rem;
-  margin: 0;
-}
-
-.links {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.links a {
-    padding: 0 1rem;
-    margin: 0;
-
+.todayis > p {
+  margin-bottom: 0;
 }
 
 .weekdayfetch{
@@ -62,7 +31,6 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between;
   padding: 0 1.5rem;
-  padding-top: 1rem;
 }
 
 .usrday {
@@ -90,38 +58,7 @@ header {
   flex-wrap: nowrap;
 }
 
-.wocards {
-    display: flex;
-    flex-flow: column wrap; 
-    align-content: center;
-}
-
-.bbox {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border: #858585 solid 3px;
-  border-radius: 2.5px;
-  background-color: rgb(135, 240, 217);
-  display: flex;
-  flex-flow: column wrap; 
-  justify-content: center;
-  width: 25em; 
-  margin: 1.25em;
-  padding: .75em;
-}
-
-.gbox {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border: #858585 solid 3px;
-  border-radius: 2.5px;
-  background-color: rgb(199, 137, 230);
-  display: flex;
-  flex-flow: column wrap; 
-  justify-content: center;
-  width: 25em; 
-  margin: 1.25em;
-  padding: .75em;
-}
-
+/* SLIDER STYLING */
 .switch {
   position: relative;
   display: inline-block;
@@ -142,7 +79,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #9ad6ce;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -154,17 +91,17 @@ header {
   width: 10px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: lavender;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: rgb(199, 137, 230);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px rgb(199, 137, 230);
 }
 
 input:checked + .slider:before {
@@ -172,109 +109,79 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+/* END SLIDER STYLING */
 
-
-/* Phone Breakpoint */
-@media only screen and (max-width: 480px) {
-
-header , body {
-  background-color: rgb(33, 33, 60);
-  color: lavender;
-}
-header {
-  box-shadow: 0 0 1rem 0 rgb(5, 5, 10);
-}
-.gi {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: baseline;
-  justify-content: center;
-}
-.woi {
-  color: rgb(118, 255, 244);
-  font-size: 2.0rem;
-}
-.desc {
-  color: lavender;
-}
-.v1 {
-  font-size: 1rem;
-  color: rgb(156, 103, 255);
-}
+/* CARD FORMATTING */
 .wocards {
-  color: rgb(33, 33, 60)
-}
- }
-
-
- @media (min-width: 1200px) {
-
-  header {
-    display: flex;
-    flex-flow: column wrap; 
-    align-content: flex-start;
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
-    padding: 0 1em;
-    background-color: rgb(33, 33, 36);
-  }
-
-  .gains {
-    margin: 1em 0;
-  }
-
-  .gi {
-      display: flex;
-      align-items: baseline;
-  }
-
-  .woi {
-    color: darkgoldenrod;
-    font-size: 5rem;
-  }
-
-  .desc , .links {
-    margin-left: 2em;
-    color: lavender;
-  }
-
-  .wocards {
     display: flex;
     flex-flow: column wrap; 
     align-content: center;
 }
 
+.cardbox {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 2px;
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: center;
+  width: 25em; 
+  margin: 1.25em;
+  padding: 0;
+}
+
 .bbox {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border: #858585 solid 3px;
-  border-radius: 2.5px;
-  background-color: rgb(135, 240, 217);
-  display: flex;
-  flex-flow: column wrap; 
-  justify-content: center;
-  width: 50em; 
-  margin: 1.25em;
-  padding: .75em;
+  background-color: #9ad6ce;
+  color:rgb(33, 33, 60);
 }
-
 .gbox {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border: #858585 solid 3px;
-  border-radius: 2.5px;
   background-color: rgb(199, 137, 230);
-  display: flex;
-  flex-flow: column wrap; 
-  justify-content: center;
-  width: 50em; 
-  margin: 1.25em;
-  padding: .75em;
 }
 
- }
-.tglbox {
-display:flex;
+.cardbox > * {
+  padding: 10px;
 }
 
-.user {
-  display: flex;
-  flex-wrap: nowrap;
+.cardbox > header {
+  font-weight: 900;
 }
+
+.srww {
+  padding-bottom: 0;
+}
+
+.sr {
+  float: left;
+  width: 50%;
+}
+
+.ww {
+  float: left;
+  width: 50%;
+}
+
+.srww::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cardbox > footer {
+  font-size: 1.2rem;
+  text-align: right;
+  padding-top: 0;
+}
+
+.btn-primary {
+  color: rgb(33, 33, 60);
+  background-color: lavender;
+  border-color: lavender;
+}
+
+.btn-primary:hover {
+  color: lavender;
+  background-color: #858585;
+  border-color: #858585;
+  text-decoration: underline;
+}
+/* END CARD FORMATTING */
+

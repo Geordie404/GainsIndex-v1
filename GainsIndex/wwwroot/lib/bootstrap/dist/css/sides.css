@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(33, 33, 60);
+    color: lavender;
+}
+
+div.form-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

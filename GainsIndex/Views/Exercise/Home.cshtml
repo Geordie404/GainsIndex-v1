@@ -9,15 +9,19 @@
 <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/header.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/home.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/query.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     @* Populate the drop down default value with current day *@
     <script>
         var dayValue =  new Date().toLocaleDateString('en', {weekday:'long'});
+        $(document).ready(function(){
+            $("#test1").text(`${dayValue}`);
+        });
         $(function() {
             $("#selectDay").val(`${dayValue}`)
-    });
+        });
     </script>
 
     <script> @* day sort *@
@@ -66,7 +70,7 @@
 
 </head>
 
-<header>
+<header class="ghead">
     <div class="gains">
     <div class="gi">
         <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
@@ -81,6 +85,8 @@
     </div>
     </div>
 </header>
+
+<div class="todayis"><p>Today is&nbsp;<p id="test1">crap</p>.</p></div>
 
 <div class="weekdayfetch">
         <div class="usrday">
@@ -119,24 +125,28 @@
     <div class="bella">
         @if (item.bella_monday)
         {
-            <div class="bbox">
-                <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-                <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-                <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-                <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+            <div class="bbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
             </div>
         }
     </div>
     <div class="geo">
         @if (item.geo_monday)
         {
-            <div class="gbox">
-            <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-            <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-            <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-            <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
-            <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+            <div class="gbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
             </div>
         }
     </div>
@@ -149,24 +159,28 @@
     <div class="bella">
     @if (item.bella_tuesday)
     {
-        <div class="bbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
-        </div>
+          <div class="bbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
+            </div>
     }
     </div>
     <div class="geo">
     @if (item.geo_tuesday)
     {
-        <div class="gbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+        <div class="gbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
         </div>
     }
     </div>
@@ -179,24 +193,28 @@
     <div class="bella">
     @if (item.bella_wednesday)
     {
-        <div class="bbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
-        </div>
+         <div class="bbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
+            </div>
     }
     </div>
     <div class="geo">
     @if (item.geo_wednesday)
     {
-        <div class="gbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+        <div class="gbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
         </div>
     }
     </div>
@@ -209,24 +227,28 @@
     <div class="bella">
     @if (item.bella_thursday)
     {
-        <div class="bbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
-        </div>
+          <div class="bbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
+            </div>
     }
     </div>
     <div class="geo">
     @if (item.geo_thursday)
     {
-        <div class="gbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+        <div class="gbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
         </div>
     }
     </div>
@@ -239,24 +261,28 @@
     <div class="bella">
     @if (item.bella_friday)
     {
-        <div class="bbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
-        </div>
+          <div class="bbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
+            </div>
     }
     </div>
     <div class="geo">
     @if (item.geo_friday)
     {
-        <div class="gbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+        <div class="gbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
         </div>
     }
     </div>
@@ -269,24 +295,28 @@
     <div class="bella">
     @if (item.bella_weekend)
     {
-        <div class="bbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
-        </div>
+         <div class="bbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
+         </div>
     }
     </div>
     <div class="geo">
     @if (item.geo_weekend)
     {
-        <div class="gbox">
-        <h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2>
-        <p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
-        <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-        <p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p>
-        <a asp-action="Log" asp-route-id="@item.id">- Log -</a>
+        <div class="gbox cardbox">
+                <header><h2>@Html.DisplayFor(modelItem => item.exercise_name)</h2></header>
+                <div class="srww">
+                <div class="sr"><p>Sets: @Html.DisplayFor(modelItem => item.sets)</p>
+                <p>Reps: @Html.DisplayFor(modelItem => item.reps)</p></div>
+                <div class="ww"><p>Working Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p></div>
+                </div>
+                <footer><a class="btn btn-primary" asp-action="Log" asp-route-id="@item.id">Log =></a></footer>
         </div>
     }
     </div>

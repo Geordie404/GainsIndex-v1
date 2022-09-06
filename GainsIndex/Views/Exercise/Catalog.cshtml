@@ -3,16 +3,22 @@
 <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/header.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/catalog.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/query.css" />
+
+    <script>
+    var day = new Date().toLocaleDateString('en', {weekday:'long'});
+    document.getElementById("demo").innerHTML = day;
+    </script>
 </head>
 
-<header>
+<header class="ghead">
     <div class="gains">
     <div class="gi">
         <h1 class="woi">【ｇａｉｎｓ　ｉｎｄｅｘ】</h1>
         <h1 class="v1">v1</h1>
     </div>
     <div class="links">
-        <a class="github" asp-controller="Exercise" asp-action="Home"><i>Workout</i></a>
+        <a class="github" asp-controller="Exercise" asp-action="Home"><i>Home</i></a>
         <a class="github" asp-controller="Exercise" asp-action="Index"><i>Index</i></a>
         <a class="github" asp-controller="Home" asp-action="About"><i>About</i></a>
         <a class="github" href="https://github.com/Geordie404/GainsIndex-v1">GitHub</a>
@@ -32,7 +38,7 @@
                 <form asp-action="Catalog" method="get">
                     <div class="form-actions no-color" style="display: flex; flex-direction: row">
                             <input type="text"  name="name_filter" placeholder="Name" style="width:80px; height:100%" />&nbsp
-                            <input type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
+                            <input class="arrow" type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
                     </div>
                 </form>
 
@@ -47,7 +53,7 @@
                             <option value="Hinge">Hinge</option>
                             <option value="Bend">Bend</option>
                         </select>&nbsp
-                        <input type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
+                        <input class="arrow" type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
                         
                     </div>
                 </form>
@@ -66,7 +72,7 @@
                             <option value="Glutes">Glutes</option>
                             <option value="Legs">Legs</option>
                         </select>&nbsp
-                        <input type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
+                        <input class="arrow" type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
                         
                     </div>
                 </form>

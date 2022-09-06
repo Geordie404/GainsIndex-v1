@@ -4,23 +4,9 @@
     box-sizing: none;
 }
 
-
-header {
-    display: flex;
-    flex-flow: column wrap; 
-    align-content: center;
-    justify-content: space-around;
-    box-shadow: 0px 10px 30px -15px rgb(134, 134, 148);
-}
-
 .gi {
     display: flex;
     align-items: baseline;
-}
-
-h1.edgyname {
-  color: darkgoldenrod;
-  font-size: 2rem;
 }
 
 .v1, .desc {
@@ -43,10 +29,15 @@ h1.edgyname {
     justify-content: space-between;
 }
 
+.arrow {
+    width: 15px;
+    height: 100%;
+}
+
 .cisecards {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    flex-flow: column wrap; 
+    align-content: center;
 }
 
 .card {
@@ -54,6 +45,7 @@ h1.edgyname {
     border: #ebb8ff solid 3px;
     border-radius: 2.5px;
     background-color: rgb(159, 243, 214);
+    color: rgb(33, 33, 60);
     display: flex;
     flex-flow: row nowrap; 
     justify-content: space-between;
@@ -61,7 +53,6 @@ h1.edgyname {
     margin: 1.25em;
     padding: .75em;
 }
-
 
 .cardbtn {
     flex-shrink: 3;

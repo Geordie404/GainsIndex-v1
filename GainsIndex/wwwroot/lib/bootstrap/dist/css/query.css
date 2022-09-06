@@ -1,0 +1,21 @@
+/* Universals */
+
+header.ghead , body {
+  background-color: rgb(33, 33, 60);
+  color: lavender;
+}
+
+/* Phone Breakpoint */
+@media only screen and (max-width: 480px) {
+
+  header.ghead , body {
+    background-color: rgb(33, 33, 60);
+  }
+  .container {
+    padding-top: 1rem;
+  }
+  .desc {
+    padding-left: 1rem;
+  }
+}
+    

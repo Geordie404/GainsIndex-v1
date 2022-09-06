@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-header {
+
+header.ghead {
     display: flex;
     flex-flow: column wrap; 
     align-content: flex-start;
@@ -24,12 +25,10 @@ th {
 }
 
 .woi {
-  color: darkgoldenrod;
-  font-size: 5rem;
+  color: lightsteelblue;
 }
-
 .v1 {
-  color: darkblue;
+  color: mediumpurple;
   text-align: center;
   font-family: "DotGothic16";
   font-size: 1.3rem;
@@ -37,7 +36,7 @@ th {
 }
 
 .desc {
-  padding: 0 1rem;
+  padding-left: 3rem;
   margin: 0;
 }
 
@@ -52,3 +51,13 @@ th {
     padding-right: 3rem;
 }
 
+/* Desktop Breakpoint */
+@media (min-width: 769px) {
+.woi {
+  font-size: 3.5rem;
+}
+.links {
+  padding: 0 3rem;
+}
+
+}
