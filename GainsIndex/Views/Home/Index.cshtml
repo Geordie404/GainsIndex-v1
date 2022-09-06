@@ -3,11 +3,11 @@
 }
 
 <div class="text-center">
-     @if (User.Identity.IsAuthenticated)
-    {
+     @* @if (User.Identity.IsAuthenticated)
+    { *@
         <a class="nav-link text-dark" asp-area="" asp-controller="Exercise" asp-action="Home"><h1>【 ｇａｉｎｓ　ｉｎｄｅｘ】</h1></a>
         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><h1>About</h1></a>
-    } else {
+    @* } else {
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link text-dark display-6" asp-area="" 
@@ -15,6 +15,6 @@
              asp-action="Login">Login</a>
         </li>
       </ul>
-      }
+      } *@
 
 </div>

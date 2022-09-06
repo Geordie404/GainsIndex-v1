@@ -19,7 +19,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Index()
         {
               return _context.Exercises != null ? 
@@ -28,7 +28,7 @@ namespace GainsIndex.Controllers
         }
 
         // Work Out Index - Home Page
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Home(string selectDay)
         {
                 return _context.Exercises != null ? 
@@ -39,7 +39,7 @@ namespace GainsIndex.Controllers
 
 
         // Catalog - Comprehensive Exercise Database View
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Catalog(string name_filter ,string motion_filter, string focus_filter)
         {
             // ViewData["CurrentFilter"] = filter;
@@ -70,7 +70,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Details/5
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -89,7 +89,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Create
-        [Authorize]
+        // [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -112,7 +112,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Edit/5
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -166,7 +166,7 @@ namespace GainsIndex.Controllers
       
 
         // GET: Exercise Limited Edit
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Log(int? id)
         {
             if (id == null || _context.Exercises == null)
@@ -218,7 +218,7 @@ namespace GainsIndex.Controllers
         }
 
         // GET: Exercise/Delete/5
-        [Authorize]
+        // [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Exercises == null)
