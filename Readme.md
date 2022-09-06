@@ -59,15 +59,25 @@ GainsIndex-v1 https://gainsindex.azurewebsites.net/
     - image for submit functionality on catalog
     - log return to home on save
 
+- Sep 5 2022
+    - updated workout cards on the home and catalog pages
+    - cleaned up css universally
+    - added more css files for compartmentalization
+    - added button for log
+
 ### TODO
-- clean up headers
-- clean up jump links
-- clean up catalog search filtering
-- add check box to cards
-- clean up card flex layout
-- add footer
+- reformat delete page
+- add check box or color change to cards to indicate completion
+- make unfliter a button on catalog
 - fix jump links across views
-- fix header across all views
-- fix organization of toggle and drop down on home page
-- make improvements and personalizations to CSS
-- add more pokemon sprites
+- catalog v1
+- workout/ home jump link uniform
+- disable authorization for job fair
+- add delete button on edit page
+- remove index and catalog links on index page
+- about page fix background color and text color
+- potentially reformat desktop if time allows
+- fork repo to AA kitchen github
+- add padding to spacing before day toggle on home
+
+
