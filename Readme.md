@@ -65,19 +65,24 @@ GainsIndex-v1 https://gainsindex.azurewebsites.net/
     - added more css files for compartmentalization
     - added button for log
 
+- Sep 6 2022
+    - reformatted:
+        - delete view
+        - catalog links & filter
+        - index links 
+        - about view css
+        - disable auth
+        - jump links on edit and delete
+
+
+
 ### TODO
-- reformat delete page
 - add check box or color change to cards to indicate completion
-- make unfliter a button on catalog
-- fix jump links across views
+- fix jump links across views - check more
 - catalog v1
 - workout/ home jump link uniform
-- disable authorization for job fair
-- add delete button on edit page
-- remove index and catalog links on index page
-- about page fix background color and text color
 - potentially reformat desktop if time allows
 - fork repo to AA kitchen github
-- add padding to spacing before day toggle on home
+- add to about page to describe quality of life intent of project
 
 

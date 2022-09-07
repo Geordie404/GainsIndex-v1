@@ -21,13 +21,9 @@
 </header>
 
 <div class="container">
+<a class="btn btn-primary" asp-action="Create" style="float: right;">New Exercise</a>
 <table class="table" cellspacing="0" cellpadding="0">
     <tbody>
-        <tr>
-            <td>
-                <a asp-action="Create">New Exercise</a>
-            </td>
-        </tr>
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -35,7 +31,6 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a>&nbsp
-                <a asp-action="Log" asp-route-id="@item.id">Log</a>&nbsp
                 <a asp-action="Details" asp-route-id="@item.id">Details</a>&nbsp
                 <a asp-action="Delete" asp-route-id="@item.id">Delete</a>&nbsp
             </td>

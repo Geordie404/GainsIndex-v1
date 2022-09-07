@@ -20,13 +20,27 @@
     justify-content: center;
 }
 
-.pkmn {
-    max-width: 100px;
+.catalog > h1 {
+    padding-left: 1rem;
 }
+
+.pkmn {
+    width: 90px;
+    margin: -2rem -1rem 0rem -1rem;
+}
+
+.filterline {
+    padding: 1rem;
+    padding-top: .5rem;
+}
+
+
+
 
 .filters {
     display: flex;
     justify-content: space-between;
+    padding: 0rem 1rem;
 }
 
 .arrow {

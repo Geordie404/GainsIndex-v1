@@ -18,7 +18,7 @@
         <h1 class="v1">v1</h1>
     </div>
     <div class="links">
-        <a class="github" asp-controller="Exercise" asp-action="Home"><i>Home</i></a>
+        <a class="github" asp-controller="Exercise" asp-action="Home"><i>Workout</i></a>
         <a class="github" asp-controller="Exercise" asp-action="Index"><i>Index</i></a>
         <a class="github" asp-controller="Home" asp-action="About"><i>About</i></a>
         <a class="github" href="https://github.com/Geordie404/GainsIndex-v1">GitHub</a>
@@ -30,8 +30,15 @@
 <body>
 <div class="container">
 <div class="catalog">
-    <h1><i>Catalog</i><img class="pkmn" src="https://img.pokemondb.net/sprites/sword-shield/icon/wobbuffet.png">&nbsp&nbsp<a asp-action="Catalog">Unfilter</a></h1>
-    <h3>Filter Catalog by...</h3>
+
+    <h1><i>Exercise Catalog</i>
+        
+    </h1>
+
+    <div class="filterline"> 
+    <h4 style="display: inline;">Filter Catalog by...<a href="@Url.Action("Catalog", "Exercise")" title="Catalog"><img class="pkmn" src="https://img.pokemondb.net/sprites/sword-shield/icon/machoke.png"></a></h4>
+    <h6 style="display: inline;"><- Unfilter</h6>
+    </div>
 
     <div class="filters">
                 @* filter for name input *@
@@ -39,6 +46,7 @@
                     <div class="form-actions no-color" style="display: flex; flex-direction: row">
                             <input type="text"  name="name_filter" placeholder="Name" style="width:80px; height:100%" />&nbsp
                             <input class="arrow" type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
+
                     </div>
                 </form>
 
