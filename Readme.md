@@ -20,6 +20,8 @@ ASP.NET Model View Controller | Web Development Framework
 [Controller] C#	              | Data Access and Application Flow
 Microsoft Azure               |	Cloud Publishing
 GitHub	                      | Version Control and Workflow
+Auth0                         | User Authorization -Disabled-
+
 
 ### PLANS FOR V2 
 - Keep track of working weight progress in a visual expression of the data
