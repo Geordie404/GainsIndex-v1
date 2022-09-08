@@ -10,17 +10,14 @@ Or forbid... using a paid exercise app...
 Gains Index provides a simple, user-friendly way to track your lifting routines.
 
 ## STACK
+                              
 ASP.NET Model View Controller | Web Development Framework
+----------------------------- | ----------------------------
 [Model] SQLite                | Database Model
------------------------------ | ----------------------------
 [View] HTML & CSS + JQuery    | Frontend UI
------------------------------ | ----------------------------
 [Controller] C#	              | Data Access and Application Flow
------------------------------ | ----------------------------
 Microsoft Azure               |	Cloud Publishing
------------------------------ | ----------------------------
 GitHub	                      | Version Control and Workflow
------------------------------ | ----------------------------
 
 ### PLANS FOR V2 
 - Keep track of working weight progress in a visual expression of the data
