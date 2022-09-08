@@ -9,6 +9,8 @@ Or forbid... using a paid exercise app...
 
 Gains Index provides a simple, user-friendly way to track your lifting routines.
 
+Building GainsIndex has been a good step in our (@almondflour2 & @geordie404) experience as aspiring web developers and further motivation for us to be more knowledgeable both behind the keyboard and under the cold metal bar in the squat rack :)
+
 ## STACK
                               
 ASP.NET Model View Controller | Web Development Framework
