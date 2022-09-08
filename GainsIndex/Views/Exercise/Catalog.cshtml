@@ -44,7 +44,7 @@
                 @* filter for name input *@
                 <form asp-action="Catalog" method="get">
                     <div class="form-actions no-color" style="display: flex; flex-direction: row">
-                            <input type="text"  name="name_filter" placeholder="Name" style="width:80px; height:100%" />&nbsp
+                            <input type="text"  name="name_filter" placeholder="Name" style="width:80px; height:100%; padding: 0; line-height: 1px;" />&nbsp
                             <input class="arrow" type="image" src="https://i.ibb.co/cN1nxnv/tile-1.png" alt="Submit Form" />
 
                     </div>
@@ -90,11 +90,11 @@
         <div class="card">
             <div class="cisename"><h2 class="cardname">@Html.DisplayFor(modelItem => item.exercise_name)</h2></div>
             <div class="attributes">
-                @* <p>Sets: @Html.DisplayFor(modelItem => item.sets) Reps: @Html.DisplayFor(modelItem => item.reps)</p>
-                <p>Bella Weight: @Html.DisplayFor(modelItem => item.ww_bella)</p>
-                <p>Geo Weight: @Html.DisplayFor(modelItem => item.ww_geo)</p> *@
-            </div>&nbsp
-            <div class="cardbtn"><a asp-action="Details" asp-route-id="@item.id"><p>Details</p></a></div>
+                <p>Target Muscle: @Html.DisplayFor(modelItem => item.target_muscle)</p>
+                <p>Motion Type: @Html.DisplayFor(modelItem => item.motion_group)</p>
+                <p>Body Focus: @Html.DisplayFor(modelItem => item.body_focus)</p>
+                <div class="cardbtn"><p>Complexity: @Html.DisplayFor(modelItem => item.exercise_type)</p><a asp-action="Details" class="btn btn-primary" asp-route-id="@item.id">Details</a></div>
+            </div>
         </div>
     }
     </div>

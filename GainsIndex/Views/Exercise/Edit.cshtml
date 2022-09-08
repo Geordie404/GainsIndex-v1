@@ -15,7 +15,7 @@
 <h1>Edit Exercise</h1>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="width:100%">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="id" />
@@ -56,7 +56,7 @@
             </div>
  
             @* Razor TextBox for geordie workign weight *@
-            <div class="form-group">
+            <div class="form-group" style="width: 25rem;">
                 @Html.TextBoxFor(m => m.ww_geo)
                 <span asp-validation-for="ww_geo" class="text-danger"></span>
                 <label asp-for="ww_geo" class="control-label">Geo Working Weight</label>
@@ -73,9 +73,9 @@
             </div>
 
             @* Razor TextArea for details *@
-            <div class="form-group">
-                <label asp-for="details" class="control-label"></label>
-                @Html.TextAreaFor(m => m.details, new { cols="50", rows="4" })
+            <div class="">
+                <label asp-for="details" class="control-label" style="display:block;"></label>
+                @Html.TextAreaFor(m => m.details, new { cols="50", rows="4", @style="width:99%;" })
                 <span asp-validation-for="details" class="text-danger"></span>
             </div>
            

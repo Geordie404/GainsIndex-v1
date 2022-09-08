@@ -3,7 +3,7 @@
 
 header.ghead {
     display: flex;
-    flex-flow: column wrap; 
+    flex-flow: column nowrap; 
     align-content: flex-start;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
 }

@@ -19,3 +19,10 @@ header.ghead , body {
   }
 }
     
+@media only screen and (min-width: 880px) {
+
+  .cardbox , .card {
+    width: 40rem;
+  }
+
+}

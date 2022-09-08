@@ -3,7 +3,36 @@ body {
     color: lavender;
 }
 
+.container {
+    padding: 1rem 2rem; 
+}
+
 div.form-group{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+div.scroll{
+    overflow-y: auto;
+    max-height: 150px;
+    background:rgba(0,0,0,0.05);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+div.oneline {
+    display: inline-block;
+    vertical-align: left;
+}
+
+tr {
+    border: none;
+}
+
+td {
+    color: white;
+    border-block: 0;
 }

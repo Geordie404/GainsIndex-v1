@@ -1,4 +1,33 @@
-GainsIndex-v1 https://gainsindex.azurewebsites.net/
+GainsIndex-v1 https://gainsindex-v1.azurewebsites.net/
+
+# GAINS INDEX 
+## V1
+This is a paired programming collaboration between two weight-lifting enthusiasts wanting to refine both their coding skills and productivity in the gym!
+
+Ever tried keeping track of your lifting routine in a notebook or on an excel sheet on your phone? 
+Tried pressing those little fields scrambling for the typing cursor? 
+Or forbid... using a paid exercise app...
+
+Gains Index provides a simple, user-friendly way to track your lifting routines.
+
+## STACK
+ASP.NET Model View Controller | Web Development Framework
+----------------------------- | ----------------------------
+[Model] SQLite                | Database Model
+----------------------------- | ----------------------------
+[View] HTML & CSS + JQuery    | Frontend UI
+----------------------------- | ----------------------------
+[Controller] C#	Data Access and Application Flow
+----------------------------- | ----------------------------
+Microsoft Azure               |	Cloud Publishing
+----------------------------- | ----------------------------
+GitHub	                        Version Control and Workflow
+----------------------------- | ----------------------------
+
+### PLANS FOR V2 
+- Keep track of working weight progress in a visual expression of the data
+- Calculated working weight suggestions
+- Remove hardcoded Geo/Bella and create custom database per user
 
 ## HOME INDEX PAGE 
 - Design plans: a home page that shows
@@ -18,7 +47,7 @@ GainsIndex-v1 https://gainsindex.azurewebsites.net/
     - .crt -> create
     - .edt -> exercise edit
 
-### UPDATES 
+### PROGRESS LOG 
 - AUG 23 2022
     - Overhauled idea for recipe book into workout index
     - added custom css file for Exercise Home 
@@ -74,15 +103,14 @@ GainsIndex-v1 https://gainsindex.azurewebsites.net/
         - disable auth
         - jump links on edit and delete
 
+- Sep 7 2022
+    - reformatted:
+        - catalog view cards 
+        - home view card size
+        - aligned index links to the right
+        - overhaul on create page
+        - minor tweaks to css that fixed the rest of the css issues...
 
 
-### TODO
-- add check box or color change to cards to indicate completion
-- fix jump links across views - check more
-- catalog v1
-- workout/ home jump link uniform
-- potentially reformat desktop if time allows
-- fork repo to AA kitchen github
-- add to about page to describe quality of life intent of project
 
 

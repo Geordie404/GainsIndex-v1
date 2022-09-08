@@ -9,9 +9,6 @@
     align-items: baseline;
 }
 
-.v1, .desc {
-    font-size: 1rem;
-}
 
 .catalog {
     max-width: 1275px;
@@ -35,8 +32,6 @@
 }
 
 
-
-
 .filters {
     display: flex;
     justify-content: space-between;
@@ -56,27 +51,24 @@
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border: #ebb8ff solid 3px;
     border-radius: 2.5px;
-    background-color: rgb(159, 243, 214);
+    background-color: rgb(203, 203, 233);
     color: rgb(33, 33, 60);
     display: flex;
-    flex-flow: row nowrap; 
-    justify-content: space-between;
+    flex-flow: column; 
     width: 25em; 
     margin: 1.25em;
     padding: .75em;
 }
 
 .cardbtn {
-    flex-shrink: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .cardbtn a {
     text-decoration: none;
+    margin-top: -2rem;
 }
 
-.cardbtn p {
-    text-orientation: upright;
-    writing-mode: vertical-rl; 
-}

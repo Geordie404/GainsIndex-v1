@@ -15,7 +15,7 @@
         <a class="github" asp-controller="Exercise" asp-action="Home"><i>Workout</i></a>
         <a class="github" asp-controller="Exercise" asp-action="Catalog"><i>Catalog</i></a>
         <a class="github" asp-controller="Home" asp-action="About"><i>About</i></a>
-        <a class="github" href="https://github.com/Geordie404/GainsIndex-v1">Git</a>
+        <a class="github" href="https://github.com/Geordie404/GainsIndex-v1">GitHub</a>
     </div>
     </div>
 </header>
@@ -29,7 +29,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.exercise_name)
             </td>
-            <td>
+            <td style="text-align: right;">
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a>&nbsp
                 <a asp-action="Details" asp-route-id="@item.id">Details</a>&nbsp
                 <a asp-action="Delete" asp-route-id="@item.id">Delete</a>&nbsp

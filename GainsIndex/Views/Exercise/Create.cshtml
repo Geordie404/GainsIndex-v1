@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/sides.css" />
 </head>
 
+<div class="container">
 <h1>Create Exercise</h1>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" style="width:100%">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -33,28 +34,28 @@
  
             @* Razor TextBox for sets *@
             <div class="form-group">
-                @Html.TextBoxFor(m => m.sets)
+                @Html.TextBoxFor(m => m.sets, new { @style="width:20%;" })
                 <span asp-validation-for="sets" class="text-danger"></span>
                 <label asp-for="sets" class="control-label"></label>
             </div>
  
             @* Razor TextBox for reps *@
             <div class="form-group">
-                @Html.TextBoxFor(m => m.reps)
+                @Html.TextBoxFor(m => m.reps, new { @style="width:20%;" })
                 <span asp-validation-for="reps" class="text-danger"></span>
                 <label asp-for="reps" class="control-label"></label>
             </div>
             
             @* Razor TextBox for bella workign weight *@
             <div class="form-group">
-                @Html.TextBoxFor(m => m.ww_bella)
+                @Html.TextBoxFor(m => m.ww_bella, new { @style="width:20%;" })
                 <span asp-validation-for="ww_bella" class="text-danger"></span>
                 <label asp-for="ww_bella" class="control-label">Bella Working Weight</label>
             </div>
  
             @* Razor TextBox for geordie workign weight *@
             <div class="form-group">
-                @Html.TextBoxFor(m => m.ww_geo)
+                @Html.TextBoxFor(m => m.ww_geo,  new { @style="width:20%;" })
                 <span asp-validation-for="ww_geo" class="text-danger"></span>
                 <label asp-for="ww_geo" class="control-label">Geo Working Weight</label>
             </div>
@@ -74,7 +75,7 @@
             <br>
             <label asp-for="details" class="control-label"></label>
             <div class="form-group">
-                @Html.TextAreaFor(m => m.details, new { cols="50", rows="5" })
+                @Html.TextAreaFor(m => m.details, new { cols="50", rows="5", @style="width:99%;" })
                 <span asp-validation-for="details" class="text-danger"></span>
             </div>
            
@@ -181,6 +182,7 @@
         </form>
         <br>
     </div>
-    <div><a asp-action="Index">Back to List</a></div>
+    <div><a asp-action="Index" class="btn btn-primary">Back to List</a></div>
+</div>
 </div>
 

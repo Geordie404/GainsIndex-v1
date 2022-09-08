@@ -112,7 +112,7 @@ input:checked + .slider:before {
 /* END SLIDER STYLING */
 
 /* CARD FORMATTING */
-.wocards {
+.cisecards {
     display: flex;
     flex-flow: column wrap; 
     align-content: center;
@@ -147,6 +147,8 @@ input:checked + .slider:before {
 
 .srww {
   padding-bottom: 0;
+  margin: 0 .5rem;
+  font-size; 1.1rem;
 }
 
 .sr {
